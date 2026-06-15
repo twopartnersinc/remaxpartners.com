@@ -1,0 +1,166 @@
+// ============================================================
+// RE/MAX Partners – script.js
+// ============================================================
+
+// ---- Sticky header ----
+const header = document.getElementById('header');
+if (header) {
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+}
+
+// ---- Mobile hamburger ----
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+if (hamburger && nav) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      nav.classList.remove('open');
+    });
+  });
+}
+
+// ---- Agent data — verified from RE/MAX.com (Corona: 24 agents | Tustin: 9 agents) ----
+const agents = [
+  {"name":"Jillene Wasson","title":"Owner / Broker","phone":"(951) 907-1727","img":"https://papiphotos.remax-im.com/Person/100073782/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01432341","office":"Corona","email":"Jill@remaxpartners.com"},
+  {"name":"Joseph L. Soto III","title":"Real Estate Expert","phone":"(909) 821-2666","img":"https://papiphotos.remax-im.com/Person/100074228/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01804497","office":"Corona","email":""},
+  {"name":"Jaime Becerra","title":"Associate","phone":"(951) 515-0817","img":"https://papiphotos.remax-im.com/Person/100014753/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01198136","office":"Corona","email":"JaimeBec.remax@gmail.com"},
+  {"name":"Tara Glatzel","title":"Associate","phone":"(951) 205-4428","img":"https://papiphotos.remax-im.com/Person/100000331/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#00981891","office":"Corona","email":"taraglatzel@yahoo.com"},
+  {"name":"Robert Arrietta","title":"Associate","phone":"(951) 278-2000","img":"https://papiphotos.remax-im.com/Person/100007512/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#00831652","office":"Corona","email":""},
+  {"name":"Nora De La Torre","title":"Real Estate Agent - CRS","phone":"(951) 345-0705","img":"https://papiphotos.remax-im.com/Person/100036647/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01260779","office":"Corona","email":""},
+  {"name":"Andrea Mazmanian","title":"Associate","phone":"(951) 207-5418","img":"https://papiphotos.remax-im.com/Person/100111584/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01892060","office":"Corona","email":"andreamazmanian@outlook.com"},
+  {"name":"David Englin","title":"Associate","phone":"(951) 237-2881","img":"https://papiphotos.remax-im.com/Person/100007511/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01045875","office":"Corona","email":"DavidEnglin.remax@gmail.com"},
+  {"name":"Heidi Franklin","title":"Associate","phone":"(909) 772-8842","img":"https://papiphotos.remax-im.com/Person/100007633/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01159662","office":"Corona","email":"Heidi@heidisellshomes.com"},
+  {"name":"Melissa Coles","title":"Associate","phone":"(951) 751-8136","img":"https://papiphotos.remax-im.com/Person/100074029/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01439193","office":"Corona","email":""},
+  {"name":"Shelly Larez","title":"Associate","phone":"(951) 847-5640","img":"https://papiphotos.remax-im.com/Person/102037482/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01960402","office":"Corona","email":"agentshellyl@gmail.com"},
+  {"name":"April Glatzel","title":"Associate","phone":"(951) 205-4429","img":"https://papiphotos.remax-im.com/Person/100014394/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01224102","office":"Corona","email":"aprilglatzel@gmail.com"},
+  {"name":"Jeannie Hallgrimson","title":"Associate","phone":"(951) 642-9933","img":"https://papiphotos.remax-im.com/Person/100015424/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01052428","office":"Corona","email":"jeannie4homes@gmail.com"},
+  {"name":"Frank Nelson","title":"Associate","phone":"(951) 314-5981","img":"https://papiphotos.remax-im.com/Person/100011943/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#00629512","office":"Corona","email":"franknelson089@gmail.com"},
+  {"name":"Chris Choumas","title":"Associate","phone":"(951) 545-6110","img":"https://papiphotos.remax-im.com/Person/100302225/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01892670","office":"Corona","email":""},
+  {"name":"Edward Mazmanian","title":"Associate","phone":"(951) 313-4750","img":"https://papiphotos.remax-im.com/Person/100018823/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01198962","office":"Corona","email":"coronarealtor@gmail.com"},
+  {"name":"Sandy Klein","title":"Associate","phone":"(951) 314-2256","img":"https://papiphotos.remax-im.com/Person/100000306/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#00960075","office":"Corona","email":"lvrlst82@aol.com"},
+  {"name":"Sherry Baldwin","title":"Associate","phone":"(951) 830-8360","img":"https://papiphotos.remax-im.com/Person/100073888/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#00858827","office":"Corona","email":""},
+  {"name":"Kelli Dewiggins","title":"Associate","phone":"","img":"https://papiphotos.remax-im.com/Person/100053148/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01832268","office":"Corona","email":"dewiggins@sbcglobal.net"},
+  {"name":"George Saucedo","title":"Associate","phone":"(951) 734-9300","img":"https://papiphotos.remax-im.com/Person/100073912/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01071475","office":"Corona","email":"sold4christ7@aol.com"},
+  {"name":"Ashley Choumas","title":"Associate","phone":"(951) 818-4168","img":"https://papiphotos.remax-im.com/Person/100053147/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01892987","office":"Corona","email":"theagentashley@gmail.com"},
+  {"name":"Micaela Gaxiola","title":"Realtor","phone":"(951) 212-0853","img":"https://papiphotos.remax-im.com/Person/102166019/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01345891","office":"Corona","email":"micaelag.remax@gmail.com"},
+  {"name":"Orlando Pino","title":"Associate","phone":"(714) 686-7736","img":"https://papiphotos.remax-im.com/Person/100043606/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01971608","office":"Corona","email":"Orlando@yourpeaceofmindrealtor.com"},
+  {"name":"Veronica Martinez","title":"Realtor®","phone":"(714) 823-7065","img":"https://papiphotos.remax-im.com/Person/100105225/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01935817","office":"Corona","email":"veronica.realtor@outlook.com"},
+  {"name":"Dave Larsen","title":"Office Manager","phone":"(714) 884-4626","img":"https://papiphotos.remax-im.com/Person/100018822/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01299973","office":"Tustin","email":"larsengroup@aol.com"},
+  {"name":"Ben Rubalcava","title":"Associate","phone":"(714) 698-3380","img":"https://papiphotos.remax-im.com/Person/100036652/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01877582","office":"Tustin","email":"benrubalcava@yahoo.com"},
+  {"name":"Jesse Martinez","title":"Associate","phone":"(626) 224-3374","img":"https://papiphotos.remax-im.com/Person/102315132/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#02218613","office":"Tustin","email":"Jesse.Martinez@remax.net"},
+  {"name":"Amanda Fallon","title":"Associate","phone":"(714) 328-0233","img":"https://papiphotos.remax-im.com/Person/101938910/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#02034337","office":"Tustin","email":"amandafallonhomes@gmail.com"},
+  {"name":"Felipe Gallardo","title":"Associate","phone":"(714) 743-5029","img":"","dre":"DRE#01221047","office":"Tustin","email":""},
+  {"name":"Stephanie Rubalcava","title":"Associate","phone":"(951) 500-6268","img":"https://papiphotos.remax-im.com/Person/102190139/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#02152260","office":"Tustin","email":""},
+  {"name":"Veasna Chiek","title":"Associate","phone":"(951) 283-6576","img":"https://papiphotos.remax-im.com/Person/102305405/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#02214917","office":"Tustin","email":""},
+  {"name":"Rebecca Vasquez","title":"Associate","phone":"(951) 602-0623","img":"https://papiphotos.remax-im.com/Person/102312329/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#02191361","office":"Tustin","email":"RebeccaVasquez@remax.net"},
+  {"name":"Jesse Ramirez","title":"Associate","phone":"(949) 817-2022","img":"https://papiphotos.remax-im.com/Person/100017650/MainPhoto_cropped/MainPhoto_cropped.jpg","dre":"DRE#01249455","office":"Tustin","email":"remaxbroker247@gmail.com"}
+];
+
+
+// ---- Build agent card HTML ----
+function buildAgentCard(agent) {
+  const initials = agent.name.split(' ').map(n => n[0]).join('').substring(0,2).toUpperCase();
+  const photoHTML = agent.img
+    ? `<img src="${agent.img}" alt="${agent.name}" class="agent-photo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" /><div class="agent-initials" style="display:none">${initials}</div>`
+    : `<div class="agent-initials">${initials}</div>`;
+  const phoneHTML = agent.phone ? `<a href="tel:${agent.phone.replace(/\D/g,'')}" class="agent-phone"><i class="fas fa-phone"></i> ${agent.phone}</a>` : '';
+  const emailHTML = agent.email ? `<a href="mailto:${agent.email}" class="agent-email"><i class="fas fa-envelope"></i> ${agent.email}</a>` : '';
+  const officeBadge = `<span class="office-badge office-${agent.office.toLowerCase()}">${agent.office}</span>`;
+  const dreHTML = agent.dre ? `<p class="agent-dre">${agent.dre}</p>` : '';
+  return `
+    <div class="agent-card" data-office="${agent.office}">
+      <div class="agent-photo-wrap">
+        ${photoHTML}
+        ${officeBadge}
+      </div>
+      <div class="agent-info">
+        <h4>${agent.name}</h4>
+        <p class="agent-title">${agent.title}</p>
+        ${dreHTML}
+        ${phoneHTML}
+        ${emailHTML}
+      </div>
+    </div>`;
+}
+
+// ---- Populate homepage preview (8 associates) ----
+const previewGrid = document.getElementById('agents-grid');
+if (previewGrid) {
+  const previewAgents = agents.filter(a => a.title !== 'Owner / Broker' && a.title !== 'Office Manager').slice(0, 8);
+  previewGrid.innerHTML = previewAgents.map(buildAgentCard).join('');
+}
+
+// ---- Populate office-specific pages ----
+const coronaGrid = document.getElementById('corona-agents-grid');
+if (coronaGrid) {
+  const coronaAgents = agents.filter(a => a.office === 'Corona');
+  coronaGrid.innerHTML = coronaAgents.map(buildAgentCard).join('');
+}
+
+const tustinGrid = document.getElementById('tustin-agents-grid');
+if (tustinGrid) {
+  const tustinAgents = agents.filter(a => a.office === 'Tustin');
+  tustinGrid.innerHTML = tustinAgents.map(buildAgentCard).join('');
+}
+
+// ---- Populate full agents page ----
+const fullGrid = document.getElementById('all-agents-grid');
+if (fullGrid) {
+  const associates = agents.filter(a => a.title !== 'Owner / Broker');
+  fullGrid.innerHTML = associates.map(buildAgentCard).join('');
+
+  // Filter buttons
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  if (filterBtns.length) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        fullGrid.querySelectorAll('.agent-card').forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.office === filter) ? '' : 'none';
+        });
+      });
+    });
+  }
+}
+
+// ---- Form handling ----
+['contact-form', 'join-form'].forEach(id => {
+  const form = document.getElementById(id);
+  if (form) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const orig = btn.innerHTML;
+      btn.innerHTML = 'Sent! <i class="fas fa-check"></i>';
+      btn.disabled = true;
+      btn.style.background = '#28a745';
+      setTimeout(() => {
+        btn.innerHTML = orig;
+        btn.disabled = false;
+        btn.style.background = '';
+        form.reset();
+      }, 4000);
+    });
+  }
+});
+
+// ---- Scroll-reveal animation ----
+const revealEls = document.querySelectorAll('.service-card, .agent-card, .location-card, .value-card, .stat');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+revealEls.forEach(el => observer.observe(el));

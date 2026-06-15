@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | RE/MAX Partners</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span><i class="fas fa-phone"></i> CORONA: <a href="tel:9512788755">(951) 278-8755</a> &nbsp;|&nbsp; TUSTIN: <a href="tel:7148844626">(714) 884-4626</a></span>
+      <span><i class="fas fa-envelope"></i> <a href="mailto:info@remaxpartners.com">info@remaxpartners.com</a></span>
+    </div>
+  </div>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/remax-logo.png" alt="RE/MAX Partners Logo" class="brand-logo" />
+        <span class="brand-sub">PARTNERS</span>
+      </a>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="corona.html">Corona</a></li>
+          <li><a href="tustin.html">Tustin</a></li>
+          <li><a href="agents.html">Our Agents</a></li>
+          <li><a href="https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450" target="_blank">Search Listings</a></li>
+          <li><a href="join.html">Join Our Team</a></li>
+          <li><a href="contact.html" class="nav-cta active">Contact Us</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <h1>Contact RE/MAX Partners</h1>
+      <p>We're here to help you with all your real estate needs. Reach out today!</p>
+    </div>
+  </section>
+
+  <section class="contact-section section-pad">
+    <div class="container contact-grid">
+      <div class="contact-info-panel">
+        <h2>Get In Touch</h2>
+        <p>Whether you're buying, selling, or investing, our team is ready to assist you. Contact us at either of our two convenient locations.</p>
+        <div class="contact-location">
+          <h3><i class="fas fa-map-marker-alt accent-red"></i> Corona Office</h3>
+          <p>434 N. Main St. #107<br>Corona, CA 92878</p>
+          <p><a href="tel:9512788755"><i class="fas fa-phone"></i> (951) 278-8755</a></p>
+        </div>
+        <div class="contact-location">
+          <h3><i class="fas fa-map-marker-alt accent-red"></i> Tustin Office</h3>
+          <p>250 W. Main St. #203<br>Tustin, CA 92780</p>
+          <p><a href="tel:7148844626"><i class="fas fa-phone"></i> (714) 884-4626</a></p>
+        </div>
+        <div class="contact-location">
+          <h3><i class="fas fa-envelope accent-red"></i> Email</h3>
+          <p><a href="mailto:info@remaxpartners.com">info@remaxpartners.com</a></p>
+        </div>
+        <div class="contact-location">
+          <h3><i class="fas fa-clock accent-red"></i> Office Hours</h3>
+          <p>Monday – Friday: 9:00 AM – 6:00 PM<br>Saturday: 10:00 AM – 4:00 PM<br>Sunday: By Appointment</p>
+        </div>
+      </div>
+      <div class="contact-form-panel">
+        <h2>Send Us a Message</h2>
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group"><label>First Name *</label><input type="text" name="first_name" placeholder="John" required /></div>
+            <div class="form-group"><label>Last Name *</label><input type="text" name="last_name" placeholder="Smith" required /></div>
+          </div>
+          <div class="form-group"><label>Email Address *</label><input type="email" name="email" placeholder="john@example.com" required /></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="(951) 555-1234" /></div>
+          <div class="form-group">
+            <label>I Am Interested In...</label>
+            <select name="interest">
+              <option value="">Select an option</option>
+              <option value="buying">Buying a Home</option>
+              <option value="selling">Selling a Home</option>
+              <option value="investing">Investment Property</option>
+              <option value="commercial">Commercial Real Estate</option>
+              <option value="relocation">Relocation</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Message *</label><textarea name="message" rows="5" placeholder="Tell us how we can help you..." required></textarea></div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message <i class="fas fa-paper-plane"></i></button>
+          <p class="form-note">* Required fields. We respect your privacy and will never share your information.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.2!2d-117.5664!3d33.8753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcae3a4c3a0001%3A0x1!2s434+N+Main+St+%23107%2C+Corona%2C+CA+92878!5e0!3m2!1sen!2sus!4v1620000000000" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" title="RE/MAX Partners Corona Office"></iframe>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/remax-logo.png" alt="RE/MAX Partners" class="footer-logo" />
+        <p class="footer-tagline">Outstanding Agents. Outstanding Results.<sup>®</sup></p>
+        <p class="footer-legal">Each Office Independently Owned and Operated.<br>License #01792182</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="corona.html">Corona</a></li>
+          <li><a href="tustin.html">Tustin</a></li>
+          <li><a href="agents.html">Our Agents</a></li>
+          <li><a href="https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450" target="_blank">Search Listings</a></li>
+          <li><a href="join.html">Join Our Team</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fas fa-map-marker-alt"></i> 434 N. Main St. #107, Corona, CA 92878</li>
+          <li><i class="fas fa-phone"></i> <a href="tel:9512788755">(951) 278-8755</a></li>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:info@remaxpartners.com">info@remaxpartners.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 RE/MAX Partners. All Rights Reserved.</p>
+        <p><i class="fas fa-home"></i> Equal Housing Opportunity</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
