@@ -153,6 +153,59 @@ if (fullGrid) {
   }
 });
 
+// ---- Hero Slideshow ----
+(function() {
+  const slides = document.querySelectorAll('.hero-slideshow .slide');
+  const dots   = document.querySelectorAll('.slide-dots .dot');
+  const prevBtn = document.querySelector('.slide-prev');
+  const nextBtn = document.querySelector('.slide-next');
+  if (!slides.length) return;
+
+  let current = 0;
+  let timer;
+  const INTERVAL = 5000; // 5 seconds per slide
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    slides[current].classList.add('prev');
+    dots[current] && dots[current].classList.remove('active');
+
+    current = (index + slides.length) % slides.length;
+
+    slides[current].classList.remove('prev');
+    slides[current].classList.add('active');
+    dots[current] && dots[current].classList.add('active');
+
+    // Remove 'prev' class after transition
+    setTimeout(() => {
+      slides.forEach(s => s.classList.remove('prev'));
+    }, 1300);
+  }
+
+  function startAuto() {
+    clearInterval(timer);
+    timer = setInterval(() => goTo(current + 1), INTERVAL);
+  }
+
+  // Arrow buttons
+  if (prevBtn) prevBtn.addEventListener('click', () => { goTo(current - 1); startAuto(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { goTo(current + 1); startAuto(); });
+
+  // Dot buttons
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => { goTo(i); startAuto(); });
+  });
+
+  // Pause on hover
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    hero.addEventListener('mouseenter', () => clearInterval(timer));
+    hero.addEventListener('mouseleave', startAuto);
+  }
+
+  startAuto();
+})();
+
 // ---- Scroll-reveal animation ----
 const revealEls = document.querySelectorAll('.service-card, .agent-card, .location-card, .value-card, .stat');
 const observer = new IntersectionObserver((entries) => {

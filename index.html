@@ -48,8 +48,25 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="home">
-    <div class="hero-bg"></div>
+    <!-- Slideshow Slides -->
+    <div class="hero-slideshow">
+      <div class="slide active" style="background-image: url('images/hero-house.jpg')"></div>
+      <div class="slide" style="background-image: url('images/interior-luxury.jpg')"></div>
+      <div class="slide" style="background-image: url('images/backyard-pool.jpg')"></div>
+      <div class="slide" style="background-image: url('images/corona-neighborhood.jpg')"></div>
+      <div class="slide" style="background-image: url('images/about-team.jpg')"></div>
+    </div>
     <div class="hero-overlay"></div>
+    <!-- Slideshow Controls -->
+    <button class="slide-arrow slide-prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+    <button class="slide-arrow slide-next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+    <div class="slide-dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
+    </div>
     <div class="container hero-content">
       <p class="hero-eyebrow">Southern California's Most Trusted Brokerage</p>
       <h1>Outstanding Agents.<br><span class="accent-red">Outstanding Results.</span><sup>®</sup></h1>
