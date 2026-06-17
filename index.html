@@ -5,11 +5,219 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RE/MAX Partners | Corona &amp; Tustin, CA</title>
   <meta name="description" content="RE/MAX Partners – Southern California's premier real estate brokerage serving Riverside and Orange Counties for over 30 years." />
-  <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root{--red:#cc0000;--red-dark:#a30000;--blue:#003da5;--blue-dark:#002d7a;--white:#fff;--off-white:#f8f9fa;--light-gray:#f0f2f5;--mid-gray:#6c757d;--dark:#1a1a2e;--text:#2d2d2d;--shadow:0 4px 24px rgba(0,0,0,.10);--shadow-lg:0 8px 40px rgba(0,0,0,.16);--radius:10px;--transition:0.35s cubic-bezier(0.4,0,0.2,1)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Open Sans',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    h1,h2,h3,h4,h5{font-family:'Montserrat',sans-serif;line-height:1.2}
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+    .section-pad{padding:80px 0}
+    .bg-light{background:var(--light-gray)}
+    .bg-dark{background:var(--dark)}
+    .accent-red{color:var(--red)}
+
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:50px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.5px;cursor:pointer;border:2px solid transparent;transition:all var(--transition);white-space:nowrap}
+    .btn-primary{background:var(--red);color:var(--white);border-color:var(--red)}
+    .btn-primary:hover{background:var(--red-dark);border-color:var(--red-dark);transform:translateY(-2px);box-shadow:0 6px 20px rgba(204,0,0,.35)}
+    .btn-outline-white{background:transparent;color:var(--white);border-color:var(--white)}
+    .btn-outline-white:hover{background:var(--white);color:var(--red);transform:translateY(-2px)}
+    .btn-lg{padding:16px 36px;font-size:1.05rem}
+    .btn-sm{padding:9px 20px;font-size:.85rem}
+
+    /* Top Bar */
+    .topbar{background:var(--dark);color:#ccc;font-size:.82rem;padding:8px 0;z-index:1000}
+    .topbar-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+    .topbar a{color:#ddd;transition:color var(--transition)}
+    .topbar a:hover{color:var(--red)}
+    .topbar i{margin-right:5px;color:var(--red)}
+
+    /* Header */
+    .header{position:sticky;top:0;z-index:999;background:var(--white);box-shadow:0 2px 16px rgba(0,0,0,.10);transition:box-shadow var(--transition)}
+    .header.scrolled{box-shadow:0 4px 24px rgba(0,0,0,.15)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px;flex-wrap:nowrap}
+    .brand{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
+    .brand-logo{height:38px;width:auto}
+    .brand-sub{font-family:'Montserrat',sans-serif;font-weight:900;font-size:.95rem;color:var(--red);letter-spacing:3px;text-transform:uppercase;white-space:nowrap}
+    .nav{flex:1}
+    .nav ul{display:flex;align-items:center;justify-content:flex-end;gap:2px;flex-wrap:nowrap;white-space:nowrap}
+    .nav ul li a{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.4px;padding:7px 9px;border-radius:6px;color:var(--dark);transition:all var(--transition);white-space:nowrap;display:block}
+    .nav ul li a:hover,.nav ul li a.active{color:var(--red);background:rgba(204,0,0,.07)}
+    .nav ul li a.nav-cta{background:var(--red);color:var(--white);border-radius:50px;padding:8px 14px;margin-left:4px}
+    .nav ul li a.nav-cta:hover{background:var(--red-dark);color:var(--white)}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;flex-shrink:0;z-index:1001}
+    .hamburger span{display:block;width:26px;height:2.5px;background:var(--dark);border-radius:2px;transition:all var(--transition)}
+    .hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+    /* Hero */
+    .hero{position:relative;min-height:92vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+    .hero-slideshow{position:absolute;inset:0;z-index:0}
+    .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.06);transition:opacity 1.2s ease,transform 6s ease;will-change:opacity,transform}
+    .slide.active{opacity:1;transform:scale(1.0)}
+    .slide.prev{opacity:0;transform:scale(1.04)}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.35) 60%,rgba(0,61,165,.18) 100%);z-index:1}
+    .hero-content{position:relative;z-index:2;padding-top:60px;padding-bottom:40px;max-width:760px}
+    .hero-eyebrow{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:3px;text-transform:uppercase;color:#f0c040;margin-bottom:16px}
+    .hero-content h1{font-size:clamp(2.4rem,5vw,4rem);font-weight:900;color:var(--white);margin-bottom:20px;text-shadow:0 2px 16px rgba(0,0,0,.4)}
+    .hero-content h1 sup{font-size:.45em;vertical-align:super}
+    .hero-sub{font-size:1.15rem;color:rgba(255,255,255,.9);margin-bottom:36px;max-width:560px}
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+    .hero-stats{position:relative;z-index:2;background:rgba(255,255,255,.10);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.15)}
+    .stats-row{display:flex;justify-content:space-around;padding:24px 0;flex-wrap:wrap;gap:16px}
+    .stat{display:flex;flex-direction:column;align-items:center;color:var(--white)}
+    .stat-num{font-family:'Montserrat',sans-serif;font-size:2.2rem;font-weight:900;color:#f0c040;line-height:1}
+    .stat-label{font-size:.78rem;text-transform:uppercase;letter-spacing:1px;opacity:.85;margin-top:4px}
+    .slide-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.5);color:var(--white);width:50px;height:50px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:all var(--transition);backdrop-filter:blur(6px)}
+    .slide-arrow:hover{background:var(--red);border-color:var(--red);transform:translateY(-50%) scale(1.08)}
+    .slide-prev{left:24px}
+    .slide-next{right:24px}
+    .slide-dots{position:absolute;bottom:90px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:10px}
+    .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;transition:all var(--transition);border:2px solid rgba(255,255,255,.6)}
+    .dot.active{background:var(--white);transform:scale(1.3);border-color:var(--white)}
+    .dot:hover{background:var(--red);border-color:var(--red)}
+
+    /* Search Banner */
+    .search-banner{background:linear-gradient(90deg,var(--red) 0%,var(--red-dark) 100%);padding:48px 0;text-align:center;color:var(--white)}
+    .search-banner h2{font-size:2rem;font-weight:800;margin-bottom:10px}
+    .search-banner p{font-size:1.05rem;opacity:.9;margin-bottom:28px}
+
+    /* Section Headers */
+    .section-header{text-align:center;margin-bottom:56px}
+    .section-header.light h2,.section-header.light p{color:var(--white)}
+    .section-eyebrow{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+    .section-header.light .section-eyebrow{color:#f0c040}
+    .section-header h2{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:var(--dark);margin-bottom:14px}
+    .section-desc{font-size:1.05rem;color:var(--mid-gray);max-width:600px;margin:0 auto}
+
+    /* About */
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .about-img-wrap{position:relative;border-radius:var(--radius);overflow:visible}
+    .award-card{background:linear-gradient(160deg,#0a1628 0%,#1a2a4a 60%,#0d1f3c 100%);border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35),0 0 0 1px rgba(212,175,55,.25);width:100%;height:420px;display:flex;flex-direction:column;position:relative}
+    .award-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(212,175,55,.12) 0%,transparent 65%);pointer-events:none}
+    .award-card-header{display:flex;align-items:center;justify-content:center;gap:10px;padding:22px 24px 14px;border-bottom:1px solid rgba(212,175,55,.2);position:relative;z-index:1}
+    .award-card-logo{height:38px;width:auto;filter:brightness(0) invert(1)}
+    .award-card-name{font-family:'Montserrat',sans-serif;font-size:1.4rem;font-weight:900;letter-spacing:.18em;color:#fff;text-transform:uppercase}
+    .award-card-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 20px 20px;position:relative;z-index:1}
+    .award-trophy-large{width:200px;height:auto;filter:drop-shadow(0 8px 24px rgba(212,175,55,.45));transition:transform .4s ease}
+    .award-card:hover .award-trophy-large{transform:scale(1.05) translateY(-4px)}
+    .award-card-title{font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:700;color:#d4af37;text-align:center;letter-spacing:.06em;text-transform:uppercase;margin-top:12px;line-height:1.4}
+    .about-text{padding-left:16px}
+    .about-text h2{font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:800;color:var(--dark);margin-bottom:20px}
+    .about-text p{color:var(--mid-gray);margin-bottom:16px}
+    .about-text .btn{margin-top:8px}
+
+    /* Services */
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+    .service-card{background:var(--white);border-radius:var(--radius);padding:36px 28px;box-shadow:var(--shadow);transition:all var(--transition);border-bottom:3px solid transparent}
+    .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-bottom-color:var(--red)}
+    .service-icon-wrap{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:20px}
+    .service-icon-wrap.red{background:rgba(204,0,0,.10);color:var(--red)}
+    .service-icon-wrap.blue{background:rgba(0,61,165,.10);color:var(--blue)}
+    .service-card h3{font-size:1.15rem;font-weight:700;color:var(--dark);margin-bottom:12px}
+    .service-card p{color:var(--mid-gray);font-size:.93rem;margin-bottom:20px}
+    .service-link{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.85rem;color:var(--red);display:inline-flex;align-items:center;gap:6px;transition:gap var(--transition)}
+    .service-link:hover{gap:10px}
+
+    /* Agents */
+    .agents-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:40px}
+    .agent-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:all var(--transition);text-align:center}
+    .agent-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+    .agent-photo-wrap{width:100%;aspect-ratio:1;overflow:hidden;background:var(--light-gray);position:relative}
+    .agent-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s ease}
+    .agent-card:hover .agent-photo-wrap img{transform:scale(1.05)}
+    .agent-initials{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:800;color:var(--white);background:linear-gradient(135deg,var(--red),var(--blue))}
+    .office-badge{position:absolute;top:10px;right:10px;font-family:'Montserrat',sans-serif;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:3px 8px;border-radius:20px;color:var(--white)}
+    .office-corona{background:var(--red)}
+    .office-tustin{background:var(--blue)}
+    .agent-info{padding:18px 14px}
+    .agent-info h4{font-size:.95rem;font-weight:700;color:var(--dark);margin-bottom:4px}
+    .agent-title{font-size:.78rem;color:var(--red);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+    .agent-dre{font-size:.72rem;color:var(--mid-gray);margin-bottom:8px}
+    .agent-phone,.agent-email{font-size:.82rem;color:var(--blue);font-weight:600;display:block;margin-bottom:4px}
+    .section-cta{text-align:center}
+
+    /* Locations */
+    .locations-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+    .location-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:40px 32px;text-align:center;color:var(--white);transition:all var(--transition)}
+    .location-card:hover{background:rgba(255,255,255,.10);transform:translateY(-4px)}
+    .location-icon{font-size:2.4rem;color:var(--red);margin-bottom:16px}
+    .location-card h3{font-size:1.4rem;font-weight:800;margin-bottom:12px}
+    .location-card p{color:rgba(255,255,255,.75);margin-bottom:16px;line-height:1.6}
+    .location-phone{display:block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.05rem;color:#f0c040;margin-bottom:20px;transition:color var(--transition)}
+    .location-phone:hover{color:var(--white)}
+    .location-phone i{margin-right:8px}
+
+    /* Join Banner */
+    .join-banner{background:linear-gradient(90deg,var(--blue) 0%,var(--blue-dark) 100%);padding:56px 0}
+    .join-banner-inner{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+    .join-text h2{font-size:1.9rem;font-weight:800;color:var(--white);margin-bottom:10px}
+    .join-text p{color:rgba(255,255,255,.85);max-width:600px}
+
+    /* Footer */
+    .footer{background:#0d0d1a;color:rgba(255,255,255,.75);padding-top:64px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
+    .footer-logo{height:40px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1)}
+    .footer-tagline{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;color:var(--white);margin-bottom:8px}
+    .footer-legal{font-size:.78rem;opacity:.6;margin-bottom:20px}
+    .footer-social{display:flex;gap:12px}
+    .footer-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-size:.85rem;transition:all var(--transition)}
+    .footer-social a:hover{background:var(--red);color:var(--white)}
+    .footer-col h4{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:1px;color:var(--white);margin-bottom:20px}
+    .footer-col ul li{margin-bottom:10px}
+    .footer-col ul li a{font-size:.88rem;color:rgba(255,255,255,.65);transition:color var(--transition)}
+    .footer-col ul li a:hover{color:var(--red)}
+    .footer-contact li{display:flex;gap:10px;font-size:.85rem;margin-bottom:12px;align-items:flex-start}
+    .footer-contact li i{color:var(--red);margin-top:3px;flex-shrink:0}
+    .footer-contact a{color:rgba(255,255,255,.65)}
+    .footer-contact a:hover{color:var(--red)}
+    .footer-bottom{padding:20px 0}
+    .footer-bottom-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:.8rem;color:rgba(255,255,255,.45)}
+    .footer-bottom a{color:rgba(255,255,255,.55)}
+    .footer-bottom a:hover{color:var(--red)}
+
+    /* Responsive */
+    @media(max-width:1024px){.services-grid{grid-template-columns:repeat(2,1fr)}.agents-grid{grid-template-columns:repeat(3,1fr)}.footer-grid{grid-template-columns:1fr 1fr}.about-grid{gap:40px}}
+    @media(max-width:900px){
+      .hamburger{display:flex}
+      .nav{position:fixed;top:68px;left:0;right:0;background:var(--white);box-shadow:0 8px 32px rgba(0,0,0,.15);padding:16px 24px 24px;transform:translateY(-120%);transition:transform .4s cubic-bezier(0.4,0,0.2,1);z-index:998;pointer-events:none}
+      .nav.open{transform:translateY(0);pointer-events:all}
+      .nav ul{flex-direction:column;align-items:stretch;gap:2px;white-space:normal}
+      .nav ul li a{display:block;padding:13px 18px;font-size:.88rem;border-radius:8px;border-bottom:1px solid rgba(0,0,0,.05)}
+      .nav ul li:last-child a{border-bottom:none}
+      .nav ul li a.nav-cta{margin:10px 0 0;text-align:center;border-radius:50px;border-bottom:none}
+    }
+    @media(max-width:768px){
+      .section-pad{padding:56px 0}
+      .header-inner{height:64px}
+      .hero{min-height:80vh}
+      .slide-arrow{display:none}
+      .slide-dots{bottom:70px}
+      .about-grid{grid-template-columns:1fr}
+      .award-card{height:360px}
+      .services-grid{grid-template-columns:1fr}
+      .agents-grid{grid-template-columns:repeat(2,1fr)}
+      .locations-grid{grid-template-columns:1fr}
+      .join-banner-inner{flex-direction:column;text-align:center}
+      .footer-grid{grid-template-columns:1fr}
+      .topbar-inner{justify-content:center;text-align:center}
+    }
+    @media(max-width:480px){
+      .agents-grid{grid-template-columns:1fr}
+      .hero-content h1{font-size:2rem}
+      .stat-num{font-size:1.6rem}
+      .about-text{padding-left:0}
+    }
+  </style>
 </head>
 <body>
 
@@ -48,9 +256,9 @@
   <!-- HERO SLIDESHOW -->
   <section class="hero" id="home">
     <div class="hero-slideshow">
-      <div class="slide active" style="background-image: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/CzEYPSoFGFJJLiXR.jpg')"></div>
-      <div class="slide" style="background-image: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/uqHJiOOaiPAWmXlO.jpg')"></div>
-      <div class="slide" style="background-image: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/QJCmBwJQsRDDdKhn.jpg')"></div>
+      <div class="slide active" style="background-image:url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/CzEYPSoFGFJJLiXR.jpg')"></div>
+      <div class="slide" style="background-image:url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/uqHJiOOaiPAWmXlO.jpg')"></div>
+      <div class="slide" style="background-image:url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/QJCmBwJQsRDDdKhn.jpg')"></div>
     </div>
     <div class="hero-overlay"></div>
     <button class="slide-arrow slide-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
@@ -81,18 +289,16 @@
 
   <!-- SEARCH BANNER -->
   <section class="search-banner">
-    <div class="container search-banner-inner">
+    <div class="container">
       <h2>Find Your Perfect Home</h2>
       <p>Browse thousands of listings in Riverside &amp; Orange Counties</p>
-      <a href="https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450" target="_blank" class="btn btn-primary btn-lg"><i class="fas fa-home"></i> View All Listings on RE/MAX.com</a>
+      <a href="https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450" target="_blank" class="btn btn-outline-white btn-lg"><i class="fas fa-home"></i> View All Listings on RE/MAX.com</a>
     </div>
   </section>
 
-  <!-- ABOUT STRIP -->
+  <!-- ABOUT -->
   <section class="about-strip section-pad" id="about">
     <div class="container about-grid">
-
-      <!-- Award Card -->
       <div class="about-img-wrap">
         <div class="award-card">
           <div class="award-card-header">
@@ -105,8 +311,6 @@
           </div>
         </div>
       </div>
-
-      <!-- About Text -->
       <div class="about-text">
         <p class="section-eyebrow">Who We Are</p>
         <h2>A Win-Win, Collaborative Partnership of Professionals</h2>
@@ -115,60 +319,29 @@
         <p>Serving <strong>Orange and Riverside Counties</strong>, with offices located in <strong>Corona &amp; Tustin</strong>.</p>
         <a href="about.html" class="btn btn-primary">Learn More About Us</a>
       </div>
-
     </div>
   </section>
 
   <!-- SERVICES -->
-  <section class="services section-pad bg-light" id="services">
+  <section class="services section-pad bg-light">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">What We Do</p>
         <h2>Full-Service Real Estate Expertise</h2>
       </div>
       <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon-wrap red"><i class="fas fa-home"></i></div>
-          <h3>Residential</h3>
-          <p>From starter homes to luxury estates, our agents guide buyers and sellers through every step.</p>
-          <a href="https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450" target="_blank" class="service-link">Search Homes <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon-wrap blue"><i class="fas fa-building"></i></div>
-          <h3>Commercial</h3>
-          <p>Expert guidance on retail, office, industrial, and multi-family investment properties.</p>
-          <a href="https://www.remaxcommercial.com/" target="_blank" class="service-link">Commercial RE/MAX <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon-wrap red"><i class="fas fa-key"></i></div>
-          <h3>First-Time Buyers</h3>
-          <p>We make the home-buying process simple and stress-free with dedicated support from start to close.</p>
-          <a href="contact.html" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon-wrap blue"><i class="fas fa-chart-line"></i></div>
-          <h3>Investment Properties</h3>
-          <p>Maximize your real estate portfolio with our experienced investment property specialists.</p>
-          <a href="contact.html" class="service-link">Talk to an Expert <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon-wrap red"><i class="fas fa-truck-moving"></i></div>
-          <h3>Relocation</h3>
-          <p>Moving to or from Southern California? Our relocation specialists ensure a seamless transition.</p>
-          <a href="contact.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon-wrap blue"><i class="fas fa-file-contract"></i></div>
-          <h3>Escrow &amp; Closing</h3>
-          <p>Our team coordinates every detail of escrow and closing for a smooth, timely transaction.</p>
-          <a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a>
-        </div>
+        <div class="service-card"><div class="service-icon-wrap red"><i class="fas fa-home"></i></div><h3>Residential</h3><p>From starter homes to luxury estates, our agents guide buyers and sellers through every step.</p><a href="https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450" target="_blank" class="service-link">Search Homes <i class="fas fa-arrow-right"></i></a></div>
+        <div class="service-card"><div class="service-icon-wrap blue"><i class="fas fa-building"></i></div><h3>Commercial</h3><p>Expert guidance on retail, office, industrial, and multi-family investment properties.</p><a href="https://www.remaxcommercial.com/" target="_blank" class="service-link">Commercial RE/MAX <i class="fas fa-arrow-right"></i></a></div>
+        <div class="service-card"><div class="service-icon-wrap red"><i class="fas fa-key"></i></div><h3>First-Time Buyers</h3><p>We make the home-buying process simple and stress-free with dedicated support from start to close.</p><a href="contact.html" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a></div>
+        <div class="service-card"><div class="service-icon-wrap blue"><i class="fas fa-chart-line"></i></div><h3>Investment Properties</h3><p>Maximize your real estate portfolio with our experienced investment property specialists.</p><a href="contact.html" class="service-link">Talk to an Expert <i class="fas fa-arrow-right"></i></a></div>
+        <div class="service-card"><div class="service-icon-wrap red"><i class="fas fa-truck-moving"></i></div><h3>Relocation</h3><p>Moving to or from Southern California? Our relocation specialists ensure a seamless transition.</p><a href="contact.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a></div>
+        <div class="service-card"><div class="service-icon-wrap blue"><i class="fas fa-file-contract"></i></div><h3>Escrow &amp; Closing</h3><p>Our team coordinates every detail of escrow and closing for a smooth, timely transaction.</p><a href="contact.html" class="service-link">Contact Us <i class="fas fa-arrow-right"></i></a></div>
       </div>
     </div>
   </section>
 
   <!-- AGENTS PREVIEW -->
-  <section class="agents-preview section-pad" id="agents">
+  <section class="agents-preview section-pad">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">Meet the Team</p>
@@ -176,14 +349,12 @@
         <p class="section-desc">Our agents are true professionals dedicated to being the best every day.</p>
       </div>
       <div class="agents-grid" id="agents-grid"></div>
-      <div class="section-cta">
-        <a href="agents.html" class="btn btn-primary">View All Agents</a>
-      </div>
+      <div class="section-cta"><a href="agents.html" class="btn btn-primary">View All Agents</a></div>
     </div>
   </section>
 
   <!-- LOCATIONS -->
-  <section class="locations section-pad bg-dark" id="locations">
+  <section class="locations section-pad bg-dark">
     <div class="container">
       <div class="section-header light">
         <p class="section-eyebrow">Find Us</p>
@@ -274,6 +445,93 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+  // Sticky header
+  const header=document.getElementById('header');
+  if(header){window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>60)})}
+
+  // Hamburger
+  const hamburger=document.getElementById('hamburger');
+  const nav=document.getElementById('nav');
+  if(hamburger&&nav){
+    hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');nav.classList.toggle('open')});
+    nav.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{hamburger.classList.remove('open');nav.classList.remove('open')}));
+  }
+
+  // Agent data
+  const agents=[
+    {name:"Jillene Wasson",title:"Owner / Broker",phone:"(951) 907-1727",img:"https://papiphotos.remax-im.com/Person/100073782/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01432341",office:"Corona"},
+    {name:"Joseph L. Soto III",title:"Real Estate Expert",phone:"(909) 821-2666",img:"https://papiphotos.remax-im.com/Person/100074228/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01804497",office:"Corona"},
+    {name:"Jaime Becerra",title:"Associate",phone:"(951) 515-0817",img:"https://papiphotos.remax-im.com/Person/100014753/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01198136",office:"Corona"},
+    {name:"Tara Glatzel",title:"Associate",phone:"(951) 205-4428",img:"https://papiphotos.remax-im.com/Person/100000331/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#00981891",office:"Corona"},
+    {name:"Robert Arrietta",title:"Associate",phone:"(951) 278-2000",img:"https://papiphotos.remax-im.com/Person/100007512/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#00831652",office:"Corona"},
+    {name:"Nora De La Torre",title:"Real Estate Agent - CRS",phone:"(951) 345-0705",img:"https://papiphotos.remax-im.com/Person/100036647/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01260779",office:"Corona"},
+    {name:"Andrea Mazmanian",title:"Associate",phone:"(951) 207-5418",img:"https://papiphotos.remax-im.com/Person/100111584/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01892060",office:"Corona"},
+    {name:"David Englin",title:"Associate",phone:"(951) 237-2881",img:"https://papiphotos.remax-im.com/Person/100007511/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01045875",office:"Corona"},
+    {name:"Heidi Franklin",title:"Associate",phone:"(909) 772-8842",img:"https://papiphotos.remax-im.com/Person/100007633/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01159662",office:"Corona"},
+    {name:"Melissa Coles",title:"Associate",phone:"(951) 751-8136",img:"https://papiphotos.remax-im.com/Person/100074029/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01439193",office:"Corona"},
+    {name:"Shelly Larez",title:"Associate",phone:"(951) 847-5640",img:"https://papiphotos.remax-im.com/Person/102037482/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01960402",office:"Corona"},
+    {name:"April Glatzel",title:"Associate",phone:"(951) 205-4429",img:"https://papiphotos.remax-im.com/Person/100014394/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01224102",office:"Corona"},
+    {name:"Jeannie Hallgrimson",title:"Associate",phone:"(951) 642-9933",img:"https://papiphotos.remax-im.com/Person/100015424/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01052428",office:"Corona"},
+    {name:"Frank Nelson",title:"Associate",phone:"(951) 314-5981",img:"https://papiphotos.remax-im.com/Person/100011943/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#00629512",office:"Corona"},
+    {name:"Chris Choumas",title:"Associate",phone:"(951) 545-6110",img:"https://papiphotos.remax-im.com/Person/100302225/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01892670",office:"Corona"},
+    {name:"Edward Mazmanian",title:"Associate",phone:"(951) 313-4750",img:"https://papiphotos.remax-im.com/Person/100018823/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01198962",office:"Corona"},
+    {name:"Sandy Klein",title:"Associate",phone:"(951) 314-2256",img:"https://papiphotos.remax-im.com/Person/100000306/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#00960075",office:"Corona"},
+    {name:"Sherry Baldwin",title:"Associate",phone:"(951) 830-8360",img:"https://papiphotos.remax-im.com/Person/100073888/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#00858827",office:"Corona"},
+    {name:"Kelli Dewiggins",title:"Associate",phone:"",img:"https://papiphotos.remax-im.com/Person/100053148/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01832268",office:"Corona"},
+    {name:"George Saucedo",title:"Associate",phone:"(951) 734-9300",img:"https://papiphotos.remax-im.com/Person/100073912/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01071475",office:"Corona"},
+    {name:"Ashley Choumas",title:"Associate",phone:"(951) 818-4168",img:"https://papiphotos.remax-im.com/Person/100053147/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01892987",office:"Corona"},
+    {name:"Micaela Gaxiola",title:"Realtor",phone:"(951) 212-0853",img:"https://papiphotos.remax-im.com/Person/102166019/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01345891",office:"Corona"},
+    {name:"Orlando Pino",title:"Associate",phone:"(714) 686-7736",img:"https://papiphotos.remax-im.com/Person/100043606/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01971608",office:"Corona"},
+    {name:"Veronica Martinez",title:"Realtor®",phone:"(714) 823-7065",img:"https://papiphotos.remax-im.com/Person/100105225/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01935817",office:"Corona"},
+    {name:"Dave Larsen",title:"Office Manager",phone:"(714) 884-4626",img:"https://papiphotos.remax-im.com/Person/100018822/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01299973",office:"Tustin"},
+    {name:"Ben Rubalcava",title:"Associate",phone:"(714) 698-3380",img:"https://papiphotos.remax-im.com/Person/100036652/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01877582",office:"Tustin"},
+    {name:"Jesse Martinez",title:"Associate",phone:"(626) 224-3374",img:"https://papiphotos.remax-im.com/Person/102315132/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#02218613",office:"Tustin"},
+    {name:"Amanda Fallon",title:"Associate",phone:"(714) 328-0233",img:"https://papiphotos.remax-im.com/Person/101938910/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#02034337",office:"Tustin"},
+    {name:"Felipe Gallardo",title:"Associate",phone:"(714) 743-5029",img:"",dre:"DRE#01221047",office:"Tustin"},
+    {name:"Stephanie Rubalcava",title:"Associate",phone:"(951) 500-6268",img:"https://papiphotos.remax-im.com/Person/102190139/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#02152260",office:"Tustin"},
+    {name:"Veasna Chiek",title:"Associate",phone:"(951) 283-6576",img:"https://papiphotos.remax-im.com/Person/102305405/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#02214917",office:"Tustin"},
+    {name:"Rebecca Vasquez",title:"Associate",phone:"(951) 602-0623",img:"https://papiphotos.remax-im.com/Person/102312329/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#02191361",office:"Tustin"},
+    {name:"Jesse Ramirez",title:"Associate",phone:"(949) 817-2022",img:"https://papiphotos.remax-im.com/Person/100017650/MainPhoto_cropped/MainPhoto_cropped.jpg",dre:"DRE#01249455",office:"Tustin"}
+  ];
+
+  function buildAgentCard(a){
+    const ini=a.name.split(' ').map(n=>n[0]).join('').substring(0,2).toUpperCase();
+    const photo=a.img?`<img src="${a.img}" alt="${a.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="agent-initials" style="display:none">${ini}</div>`:`<div class="agent-initials">${ini}</div>`;
+    const ph=a.phone?`<a href="tel:${a.phone.replace(/\D/g,'')}" class="agent-phone"><i class="fas fa-phone"></i> ${a.phone}</a>`:'';
+    return`<div class="agent-card"><div class="agent-photo-wrap">${photo}<span class="office-badge office-${a.office.toLowerCase()}">${a.office}</span></div><div class="agent-info"><h4>${a.name}</h4><p class="agent-title">${a.title}</p><p class="agent-dre">${a.dre}</p>${ph}</div></div>`;
+  }
+
+  const grid=document.getElementById('agents-grid');
+  if(grid){
+    const preview=agents.filter(a=>a.title!=='Owner / Broker'&&a.title!=='Office Manager').slice(0,8);
+    grid.innerHTML=preview.map(buildAgentCard).join('');
+  }
+
+  // Hero Slideshow
+  (function(){
+    const slides=document.querySelectorAll('.hero-slideshow .slide');
+    const dots=document.querySelectorAll('.slide-dots .dot');
+    const prev=document.querySelector('.slide-prev');
+    const next=document.querySelector('.slide-next');
+    if(!slides.length)return;
+    let cur=0,timer;
+    function goTo(i){
+      slides[cur].classList.remove('active');slides[cur].classList.add('prev');
+      dots[cur]&&dots[cur].classList.remove('active');
+      cur=(i+slides.length)%slides.length;
+      slides[cur].classList.remove('prev');slides[cur].classList.add('active');
+      dots[cur]&&dots[cur].classList.add('active');
+      setTimeout(()=>slides.forEach(s=>s.classList.remove('prev')),1300);
+    }
+    function start(){clearInterval(timer);timer=setInterval(()=>goTo(cur+1),5000)}
+    if(prev)prev.addEventListener('click',()=>{goTo(cur-1);start()});
+    if(next)next.addEventListener('click',()=>{goTo(cur+1);start()});
+    dots.forEach((d,i)=>d.addEventListener('click',()=>{goTo(i);start()}));
+    const hero=document.querySelector('.hero');
+    if(hero){hero.addEventListener('mouseenter',()=>clearInterval(timer));hero.addEventListener('mouseleave',start)}
+    start();
+  })();
+  </script>
 </body>
 </html>
