@@ -3,225 +3,217 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | RE/MAX Partners</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>About RE/MAX Partners | Award-Winning Realtors in Tustin & Corona CA</title>
+  <meta name="description" content="Learn about RE/MAX Partners — an award-winning real estate brokerage with offices in Tustin and Corona, CA, serving Orange County and Inland Empire since 1992." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.remaxpartners.com/about.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About RE/MAX Partners | Award-Winning Realtors in Tustin & Corona CA" />
+  <meta property="og:description" content="Award-winning RE/MAX brokerage with offices in Tustin and Corona, CA. Over 30 years serving Orange County and Riverside County buyers and sellers." />
+  <meta property="og:url" content="https://www.remaxpartners.com/about.html" />
+  <meta property="og:site_name" content="RE/MAX Partners" />
+  <meta property="og:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/erXUjFsIWqmooNMz.png" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About RE/MAX Partners | Award-Winning Realtors in Tustin & Corona CA" />
+  <meta name="twitter:description" content="Award-winning RE/MAX brokerage with offices in Tustin and Corona, CA. Over 30 years serving Orange County and Riverside County buyers and sellers." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    /* ===== ABOUT PAGE SPECIFIC STYLES ===== */
-    .about-story-section {
-      padding: 80px 0;
-      background: #fff;
-    }
-    .about-story-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-    .about-story-text h2 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #1a1a2e;
-      margin-bottom: 20px;
-      line-height: 1.2;
-    }
-    .about-story-text p {
-      color: #555;
-      line-height: 1.8;
-      margin-bottom: 16px;
-      font-size: 1.05rem;
-    }
-    .about-services-list {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .about-services-list li {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #333;
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-    .about-services-list li i {
-      color: #cc0000;
-      font-size: 1rem;
-    }
-    .about-award-col {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-    }
-    .award-trophy-wrap {
-      background: linear-gradient(135deg, #f8f4e8 0%, #fff9ec 100%);
-      border-radius: 20px;
-      padding: 40px 30px;
-      text-align: center;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.10);
-      border: 2px solid #f0c040;
-      width: 100%;
-    }
-    .award-trophy-wrap img {
-      max-width: 260px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto 20px;
-    }
-    .award-trophy-title {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: #1a1a2e;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 6px;
-    }
-    .award-trophy-sub {
-      font-size: 0.9rem;
-      color: #888;
-      font-style: italic;
-    }
-    .award-stats-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      width: 100%;
-    }
-    .award-stat-box {
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px 16px;
-      text-align: center;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
-      border-top: 4px solid #cc0000;
-    }
-    .award-stat-box .stat-num {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #cc0000;
-      display: block;
-    }
-    .award-stat-box .stat-label {
-      font-size: 0.8rem;
-      color: #666;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    /* ===== VALUES SECTION ===== */
-    .about-values-section {
-      padding: 80px 0;
-      background: #f8f9fa;
-    }
-    .about-values-section .section-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    .about-values-section .section-header h2 {
-      font-size: 2rem;
-      font-weight: 800;
-      color: #1a1a2e;
-    }
-    .values-grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-    .value-card-v2 {
-      background: #fff;
-      border-radius: 16px;
-      padding: 36px 24px;
-      text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .value-card-v2:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-    }
-    .value-icon-circle {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #cc0000, #ff4444);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-    }
-    .value-icon-circle i {
-      font-size: 1.6rem;
-      color: #fff;
-    }
-    .value-card-v2 h3 {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: #1a1a2e;
-      margin-bottom: 10px;
-    }
-    .value-card-v2 p {
-      font-size: 0.92rem;
-      color: #666;
-      line-height: 1.6;
-    }
-
-    /* ===== MISSION SECTION ===== */
-    .about-mission-section {
-      padding: 80px 0;
-      background: #1a1a2e;
-      color: #fff;
-      text-align: center;
-    }
-    .about-mission-section .section-eyebrow {
-      color: #f0c040;
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 16px;
-    }
-    .about-mission-section h2 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      margin-bottom: 24px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .about-mission-section p {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.8);
-      max-width: 680px;
-      margin: 0 auto 40px;
-      line-height: 1.8;
-    }
-    .mission-btn-row {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 900px) {
-      .about-story-grid { grid-template-columns: 1fr; gap: 40px; }
-      .values-grid-4 { grid-template-columns: repeat(2, 1fr); }
-      .about-services-list { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 600px) {
-      .values-grid-4 { grid-template-columns: 1fr; }
-      .award-stats-row { grid-template-columns: 1fr 1fr; }
-    }
+    :root{--red:#cc0000;--red-dark:#a30000;--blue:#003da5;--blue-dark:#002d7a;--white:#fff;--off-white:#f8f9fa;--light-gray:#f0f2f5;--mid-gray:#6c757d;--dark:#1a1a2e;--text:#2d2d2d;--shadow:0 4px 24px rgba(0,0,0,.10);--shadow-lg:0 8px 40px rgba(0,0,0,.16);--radius:10px;--transition:0.35s cubic-bezier(0.4,0,0.2,1)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Open Sans',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    h1,h2,h3,h4,h5{font-family:'Montserrat',sans-serif;line-height:1.2}
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+    .section-pad{padding:80px 0}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:50px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.5px;cursor:pointer;border:2px solid transparent;transition:all var(--transition);white-space:nowrap}
+    .btn-primary{background:var(--red);color:var(--white);border-color:var(--red)}
+    .btn-primary:hover{background:var(--red-dark);border-color:var(--red-dark);transform:translateY(-2px);box-shadow:0 6px 20px rgba(204,0,0,.35)}
+    .btn-outline-white{background:transparent;color:var(--white);border-color:var(--white)}
+    .btn-outline-white:hover{background:var(--white);color:var(--red);transform:translateY(-2px)}
+    .btn-outline-red{background:transparent;color:var(--red);border-color:var(--red)}
+    .btn-outline-red:hover{background:var(--red);color:var(--white);transform:translateY(-2px)}
+    .btn-lg{padding:16px 36px;font-size:1.05rem}
+    .topbar{background:var(--dark);color:#ccc;font-size:.82rem;padding:8px 0;z-index:1000}
+    .topbar-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+    .topbar a{color:#ddd;transition:color var(--transition)}
+    .topbar a:hover{color:var(--red)}
+    .topbar i{margin-right:5px;color:var(--red)}
+    .header{position:sticky;top:0;z-index:999;background:var(--white);box-shadow:0 2px 16px rgba(0,0,0,.10);transition:box-shadow var(--transition)}
+    .header.scrolled{box-shadow:0 4px 24px rgba(0,0,0,.15)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px;flex-wrap:nowrap}
+    .brand{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
+    .brand-logo{height:38px;width:auto}
+    .brand-sub{font-family:'Montserrat',sans-serif;font-weight:900;font-size:.95rem;color:var(--red);letter-spacing:3px;text-transform:uppercase;white-space:nowrap}
+    .nav{flex:1;min-width:0}
+    .nav ul{display:flex;align-items:center;justify-content:flex-end;gap:1px;flex-wrap:nowrap;white-space:nowrap}
+    .nav ul li a{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.7rem;text-transform:uppercase;letter-spacing:.3px;padding:6px 8px;border-radius:6px;color:var(--dark);transition:all var(--transition);white-space:nowrap;display:block}
+    .nav ul li a:hover,.nav ul li a.active{color:var(--red);background:rgba(204,0,0,.07)}
+    .nav ul li a.nav-cta{background:var(--red);color:var(--white);border-radius:50px;padding:7px 12px;margin-left:4px}
+    .nav ul li a.nav-cta:hover{background:var(--red-dark);color:var(--white)}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;flex-shrink:0;z-index:1001}
+    .hamburger span{display:block;width:26px;height:2.5px;background:var(--dark);border-radius:2px;transition:all var(--transition)}
+    .hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+    .section-eyebrow{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:10px;display:block}
+    /* Page Hero */
+    .page-hero{position:relative;background:linear-gradient(135deg,#0a1628 0%,#1a2a4a 60%,#0d1f3c 100%);padding:100px 0 80px;text-align:center;overflow:hidden}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(204,0,0,.18) 0%,transparent 65%)}
+    .page-hero-content{position:relative;z-index:1}
+    .page-hero h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:var(--white);margin-bottom:16px}
+    .page-hero p{font-size:1.1rem;color:rgba(255,255,255,.8);max-width:600px;margin:0 auto}
+    /* About Story */
+    .about-story-section{padding:80px 0;background:#fff}
+    .about-story-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .about-story-text h2{font-size:2.2rem;font-weight:800;color:#1a1a2e;margin-bottom:20px;line-height:1.2}
+    .about-story-text p{color:#555;line-height:1.8;margin-bottom:16px;font-size:1.05rem}
+    .about-services-list{list-style:none;padding:0;margin:20px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .about-services-list li{display:flex;align-items:center;gap:8px;color:#333;font-size:.95rem;font-weight:600}
+    .about-services-list li i{color:#cc0000;font-size:1rem}
+    .about-award-col{display:flex;flex-direction:column;align-items:center;gap:24px}
+    .award-trophy-wrap{background:linear-gradient(160deg,#0a1628 0%,#1a2a4a 60%,#0d1f3c 100%);border-radius:20px;padding:32px 24px 28px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.35),0 0 0 1px rgba(212,175,55,.25);width:100%;position:relative}
+    .award-trophy-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(212,175,55,.18) 0%,transparent 65%);pointer-events:none;border-radius:20px}
+    .award-brand-row{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(212,175,55,.25);position:relative;z-index:1}
+    .award-brand-remax{font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:900;color:#cc0000;letter-spacing:.05em}
+    .award-brand-partners{font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:900;color:#fff;letter-spacing:.18em;text-transform:uppercase}
+    .award-trophy-img{width:240px;height:auto;display:block;margin:0 auto 20px;filter:drop-shadow(0 12px 32px rgba(212,175,55,.6)) drop-shadow(0 0 60px rgba(212,175,55,.2));transition:transform .4s ease;position:relative;z-index:1}
+    .award-trophy-wrap:hover .award-trophy-img{transform:scale(1.06) translateY(-6px)}
+    .award-trophy-title{font-family:'Montserrat',sans-serif;font-size:1.3rem;font-weight:900;color:#f0c040;text-align:center;letter-spacing:.08em;text-transform:uppercase;line-height:1.4;text-shadow:0 2px 16px rgba(212,175,55,.7),0 0 30px rgba(212,175,55,.3);position:relative;z-index:1}
+    .award-stats-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%}
+    .award-stat-box{background:#fff;border-radius:12px;padding:20px 16px;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.07);border-top:4px solid #cc0000}
+    .award-stat-box .stat-num{font-size:2rem;font-weight:900;color:#cc0000;display:block;font-family:'Montserrat',sans-serif}
+    .award-stat-box .stat-label{font-size:.8rem;color:#666;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+    /* Values */
+    .about-values-section{padding:80px 0;background:#f8f9fa}
+    .section-header{text-align:center;margin-bottom:50px}
+    .section-header h2{font-size:2rem;font-weight:800;color:#1a1a2e;margin-bottom:14px}
+    .values-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    .value-card-v2{background:#fff;border-radius:16px;padding:36px 24px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.07);transition:transform .3s,box-shadow .3s}
+    .value-card-v2:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(0,0,0,.12)}
+    .value-icon-circle{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#cc0000,#ff4444);display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+    .value-icon-circle i{font-size:1.6rem;color:#fff}
+    .value-card-v2 h3{font-size:1.1rem;font-weight:800;color:#1a1a2e;margin-bottom:10px}
+    .value-card-v2 p{font-size:.92rem;color:#666;line-height:1.6}
+    /* Mission */
+    .about-mission-section{padding:80px 0;background:#1a1a2e;color:#fff;text-align:center}
+    .about-mission-section .section-eyebrow{color:#f0c040}
+    .about-mission-section h2{font-size:2.2rem;font-weight:800;margin-bottom:24px;max-width:700px;margin-left:auto;margin-right:auto}
+    .about-mission-section p{font-size:1.1rem;color:rgba(255,255,255,.8);max-width:680px;margin:0 auto 40px;line-height:1.8}
+    .mission-btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    /* Footer */
+    .footer{background:#0d0d1a;color:rgba(255,255,255,.75);padding-top:64px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
+    .footer-brand-text{margin-bottom:16px}
+    .footer-brand-remax{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:900;color:#cc0000}
+    .footer-brand-partners{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:900;color:#fff;letter-spacing:.15em}
+    .footer-tagline{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;color:var(--white);margin-bottom:8px}
+    .footer-legal{font-size:.78rem;opacity:.6;margin-bottom:20px}
+    .footer-social{display:flex;gap:12px}
+    .footer-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-size:.85rem;transition:all var(--transition)}
+    .footer-social a:hover{background:var(--red);color:var(--white)}
+    .footer-col h4{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:1px;color:var(--white);margin-bottom:20px}
+    .footer-col ul li{margin-bottom:10px}
+    .footer-col ul li a{font-size:.88rem;color:rgba(255,255,255,.65);transition:color var(--transition)}
+    .footer-col ul li a:hover{color:var(--red)}
+    .footer-contact li{display:flex;gap:10px;font-size:.85rem;margin-bottom:12px;align-items:flex-start}
+    .footer-contact li i{color:var(--red);margin-top:3px;flex-shrink:0}
+    .footer-contact a{color:rgba(255,255,255,.65)}
+    .footer-contact a:hover{color:var(--red)}
+    .footer-bottom{padding:20px 0}
+    .footer-bottom-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:.8rem;color:rgba(255,255,255,.45)}
+    .footer-bottom a{color:rgba(255,255,255,.55)}
+    .footer-bottom a:hover{color:var(--red)}
+    @media(max-width:900px){.about-story-grid{grid-template-columns:1fr;gap:40px}.values-grid-4{grid-template-columns:repeat(2,1fr)}.about-services-list{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){.footer-grid{grid-template-columns:1fr}}
+    @media(max-width:900px){.hamburger{display:flex}.nav{position:fixed;top:68px;left:0;right:0;background:var(--white);box-shadow:0 8px 32px rgba(0,0,0,.15);padding:16px 24px 24px;transform:translateY(-120%);transition:transform .4s cubic-bezier(0.4,0,0.2,1);z-index:998;pointer-events:none}.nav.open{transform:translateY(0);pointer-events:all}.nav ul{flex-direction:column;align-items:stretch;gap:2px;white-space:normal}.nav ul li a{display:block;padding:13px 18px;font-size:.88rem;border-radius:8px;border-bottom:1px solid rgba(0,0,0,.05)}.nav ul li a.nav-cta{margin:10px 0 0;text-align:center;border-radius:50px;border-bottom:none}}
+    @media(max-width:600px){.values-grid-4{grid-template-columns:1fr}.award-stats-row{grid-template-columns:1fr 1fr}}
   </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "AboutPage",
+    "WebPage"
+  ],
+  "name": "About RE/MAX Partners",
+  "url": "https://www.remaxpartners.com/about.html",
+  "description": "RE/MAX Partners is an award-winning real estate brokerage with offices in Tustin and Corona, CA, serving Orange County and Inland Empire since 1992.",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": [
+      "Organization",
+      "RealEstateAgency"
+    ],
+    "name": "RE/MAX Partners",
+    "legalName": "RE/MAX Partners",
+    "url": "https://www.remaxpartners.com",
+    "logo": "https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/erXUjFsIWqmooNMz.png",
+    "image": "https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/erXUjFsIWqmooNMz.png",
+    "description": "RE/MAX Partners is an award-winning real estate brokerage with offices in Tustin and Corona, CA, serving Orange County and Inland Empire buyers and sellers.",
+    "foundingDate": "1992",
+    "areaServed": [
+      "Tustin, CA",
+      "Irvine, CA",
+      "Santa Ana, CA",
+      "Orange, CA",
+      "Anaheim, CA",
+      "Anaheim Hills, CA",
+      "Lake Forest, CA",
+      "Villa Park, CA",
+      "North Tustin, CA",
+      "Corona, CA",
+      "Eastvale, CA",
+      "Norco, CA",
+      "Riverside, CA",
+      "Chino Hills, CA",
+      "Jurupa Valley, CA",
+      "Lake Elsinore, CA",
+      "Temescal Valley, CA"
+    ],
+    "location": [
+      {
+        "@type": "Place",
+        "name": "RE/MAX Partners - Tustin Office",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "250 W. Main St. #203",
+          "addressLocality": "Tustin",
+          "addressRegion": "CA",
+          "postalCode": "92780",
+          "addressCountry": "US"
+        },
+        "telephone": "+17148844626"
+      },
+      {
+        "@type": "Place",
+        "name": "RE/MAX Partners - Corona Office",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "434 N. Main St. #107",
+          "addressLocality": "Corona",
+          "addressRegion": "CA",
+          "postalCode": "92878",
+          "addressCountry": "US"
+        },
+        "telephone": "+19512788755"
+      }
+    ],
+    "sameAs": [
+      "https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450",
+      "https://www.remax.com/usa/en/residential/office/tustin/remax-partners-100766001"
+    ]
+  }
+}
+  </script>
 </head>
 <body>
 
@@ -229,7 +221,6 @@
   <div class="topbar">
     <div class="container topbar-inner">
       <span><i class="fas fa-phone"></i> CORONA: <a href="tel:9512788755">(951) 278-8755</a> &nbsp;|&nbsp; TUSTIN: <a href="tel:7148844626">(714) 884-4626</a></span>
-      
     </div>
   </div>
 
@@ -237,7 +228,7 @@
   <header class="header" id="header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
-        <img src="images/remax-logo.png" alt="RE/MAX Partners Logo" class="brand-logo" />
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/erXUjFsIWqmooNMz.png" alt="RE/MAX Partners Logo" class="brand-logo" />
         <span class="brand-sub">PARTNERS</span>
       </a>
       <nav class="nav" id="nav">
@@ -258,8 +249,8 @@
 
   <!-- PAGE HERO -->
   <section class="page-hero">
-    <div class="page-hero-overlay"></div>
     <div class="container page-hero-content">
+      <span class="section-eyebrow" style="color:#f0c040;display:block;margin-bottom:12px">Our Story</span>
       <h1>About RE/MAX Partners</h1>
       <p>Over 30 years of excellence in Southern California real estate.</p>
     </div>
@@ -268,10 +259,8 @@
   <!-- OUR STORY + AWARD -->
   <section class="about-story-section">
     <div class="container about-story-grid">
-
-      <!-- LEFT: Story Text -->
       <div class="about-story-text">
-        <p class="section-eyebrow">Our Story</p>
+        <span class="section-eyebrow">Our Story</span>
         <h2>A Legacy of Trust &amp; Excellence</h2>
         <p>RE/MAX Partners Real Estate has been assisting Southern California home Buyers and Sellers for over <strong>30 years</strong>. Our message is simple — we are here to assist you and your family with all your real estate needs.</p>
         <p>Our longevity and success has been possible due to the professionalism and knowledge of every Sales Associate within our organization. Our highly trained agents are able to assist in all fields of real estate including:</p>
@@ -285,40 +274,28 @@
           <li><i class="fas fa-check-circle"></i> Inherited Properties</li>
           <li><i class="fas fa-check-circle"></i> Escrow &amp; Closing</li>
         </ul>
-        <p>Specializing in <strong>Riverside and Orange Counties</strong>, with offices conveniently located in <strong>Corona &amp; Tustin</strong>.</p>
-        <div style="margin-top:28px; display:flex; gap:14px; flex-wrap:wrap;">
+        <p>Serving <strong>Riverside and Orange Counties</strong>, with offices conveniently located in <strong>Corona &amp; Tustin</strong>.</p>
+        <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;">
           <a href="agents.html" class="btn btn-primary"><i class="fas fa-users"></i> Meet Our Agents</a>
           <a href="contact.html" class="btn btn-outline-red"><i class="fas fa-phone"></i> Contact Us</a>
         </div>
       </div>
-
-      <!-- RIGHT: Award Trophy + Stats -->
       <div class="about-award-col">
         <div class="award-trophy-wrap">
-          <img src="images/MostDistinguishedOffice.png" alt="RE/MAX Partners Most Distinguished Office Award" />
-          <div class="award-trophy-title">Most Distinguished Office Award</div>
-          <div class="award-trophy-sub">RE/MAX International Recognition</div>
+          <div class="award-brand-row">
+            <span class="award-brand-remax">RE/MAX</span>
+            <span class="award-brand-partners">PARTNERS</span>
+          </div>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/wdJQYxphtzgNDNMY.png" alt="Most Distinguished Office Award Trophy" class="award-trophy-img" />
+          <div class="award-trophy-title">Most Distinguished<br>Office Award</div>
         </div>
         <div class="award-stats-row">
-          <div class="award-stat-box">
-            <span class="stat-num">30+</span>
-            <span class="stat-label">Years in Business</span>
-          </div>
-          <div class="award-stat-box">
-            <span class="stat-num">2</span>
-            <span class="stat-label">Office Locations</span>
-          </div>
-          <div class="award-stat-box">
-            <span class="stat-num">24+</span>
-            <span class="stat-label">Expert Agents</span>
-          </div>
-          <div class="award-stat-box">
-            <span class="stat-num">#1</span>
-            <span class="stat-label">RE/MAX Network</span>
-          </div>
+          <div class="award-stat-box"><span class="stat-num">30+</span><span class="stat-label">Years in Business</span></div>
+          <div class="award-stat-box"><span class="stat-num">2</span><span class="stat-label">Office Locations</span></div>
+          <div class="award-stat-box"><span class="stat-num">24+</span><span class="stat-label">Expert Agents</span></div>
+          <div class="award-stat-box"><span class="stat-num">#1</span><span class="stat-label">RE/MAX Network</span></div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -326,30 +303,14 @@
   <section class="about-values-section">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">Our Values</p>
+        <span class="section-eyebrow">Our Values</span>
         <h2>What Sets RE/MAX Partners Apart</h2>
       </div>
       <div class="values-grid-4">
-        <div class="value-card-v2">
-          <div class="value-icon-circle"><i class="fas fa-handshake"></i></div>
-          <h3>Integrity</h3>
-          <p>We operate with complete transparency and honesty in every transaction, putting our clients first always.</p>
-        </div>
-        <div class="value-card-v2">
-          <div class="value-icon-circle"><i class="fas fa-star"></i></div>
-          <h3>Excellence</h3>
-          <p>Award-winning service backed by the global RE/MAX network and 30+ years of local expertise.</p>
-        </div>
-        <div class="value-card-v2">
-          <div class="value-icon-circle"><i class="fas fa-users"></i></div>
-          <h3>Community</h3>
-          <p>Deeply rooted in Riverside and Orange Counties, we invest in the communities we serve every day.</p>
-        </div>
-        <div class="value-card-v2">
-          <div class="value-icon-circle"><i class="fas fa-lightbulb"></i></div>
-          <h3>Innovation</h3>
-          <p>We leverage the latest technology and marketing tools to deliver the best results for our clients.</p>
-        </div>
+        <div class="value-card-v2"><div class="value-icon-circle"><i class="fas fa-handshake"></i></div><h3>Integrity</h3><p>We operate with complete transparency and honesty in every transaction, putting our clients first always.</p></div>
+        <div class="value-card-v2"><div class="value-icon-circle"><i class="fas fa-star"></i></div><h3>Excellence</h3><p>Award-winning service backed by the global RE/MAX network and 30+ years of local expertise.</p></div>
+        <div class="value-card-v2"><div class="value-icon-circle"><i class="fas fa-users"></i></div><h3>Community</h3><p>Deeply rooted in Riverside and Orange Counties, we invest in the communities we serve every day.</p></div>
+        <div class="value-card-v2"><div class="value-icon-circle"><i class="fas fa-lightbulb"></i></div><h3>Innovation</h3><p>We leverage the latest technology and marketing tools to deliver the best results for our clients.</p></div>
       </div>
     </div>
   </section>
@@ -357,7 +318,7 @@
   <!-- MISSION BANNER -->
   <section class="about-mission-section">
     <div class="container">
-      <p class="section-eyebrow">Our Mission</p>
+      <span class="section-eyebrow">Our Mission</span>
       <h2>Dedicated to Making Your Real Estate Dreams a Reality</h2>
       <p>All of us at RE/MAX Partners were honored to receive RE/MAX International's <strong style="color:#f0c040;">"Most Distinguished Office Award"</strong>. Our Sales Associates are true professionals who work at being the best every single day — for you.</p>
       <div class="mission-btn-row">
@@ -368,10 +329,78 @@
   </section>
 
   <!-- FOOTER -->
+  <!-- Leadership Team Section -->
+  <section style="padding:80px 0;background:#f8f9fa">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:50px">
+        <span style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:3px;text-transform:uppercase;color:#cc0000;display:block;margin-bottom:10px">Our Leadership</span>
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;color:#1a1a2e;margin-bottom:14px">Meet Our Leadership Team</h2>
+        <p style="color:#6c757d;max-width:600px;margin:0 auto;font-size:1.05rem">The experienced professionals leading RE/MAX Partners across our Tustin and Corona offices.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
+
+        <!-- Sharon Rotondo -->
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.10);text-align:center;transition:transform .35s,box-shadow .35s" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 8px 40px rgba(0,0,0,.16)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 24px rgba(0,0,0,.10)'">
+          <div style="width:100%;aspect-ratio:1;overflow:hidden;background:#f0f2f5">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/IUqiWHvXmVaCJcha.jpg" alt="Sharon Rotondo — President/Owner, RE/MAX Partners" style="width:100%;height:100%;object-fit:cover;object-position:top" />
+          </div>
+          <div style="padding:20px 16px">
+            <h4 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:#1a1a2e;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Sharon Rotondo</h4>
+            <p style="font-size:.82rem;color:#cc0000;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px">President / Owner</p>
+            <a href="tel:9512788755" style="display:block;font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:800;color:#1a1a2e;margin-bottom:6px;text-decoration:none">951.278.8755</a>
+            <a href="mailto:slrotondo@earthlink.net" style="display:block;font-size:.82rem;color:#003da5;font-weight:600;text-decoration:none">slrotondo@earthlink.net</a>
+          </div>
+        </div>
+
+        <!-- Jillene Wasson -->
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.10);text-align:center;transition:transform .35s,box-shadow .35s" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 8px 40px rgba(0,0,0,.16)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 24px rgba(0,0,0,.10)'">
+          <div style="width:100%;aspect-ratio:1;overflow:hidden;background:#f0f2f5">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/IHRNiBAPlpLFhodM.jpg" alt="Jillene Wasson — Broker, RE/MAX Partners" style="width:100%;height:100%;object-fit:cover;object-position:top" />
+          </div>
+          <div style="padding:20px 16px">
+            <h4 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:#1a1a2e;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Jillene Wasson</h4>
+            <p style="font-size:.82rem;color:#cc0000;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px">Broker</p>
+            <a href="tel:9519071727" style="display:block;font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:800;color:#1a1a2e;margin-bottom:6px;text-decoration:none">951.907.1727</a>
+            <a href="mailto:Jill@remaxpartners.com" style="display:block;font-size:.82rem;color:#003da5;font-weight:600;text-decoration:none">Jill@remaxpartners.com</a>
+          </div>
+        </div>
+
+        <!-- Jennifer Zuniga -->
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.10);text-align:center;transition:transform .35s,box-shadow .35s" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 8px 40px rgba(0,0,0,.16)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 24px rgba(0,0,0,.10)'">
+          <div style="width:100%;aspect-ratio:1;overflow:hidden;background:#f0f2f5">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/TKZSudLBdbTPcLyT.jpg" alt="Jennifer Zuniga — Corona Office Assistant, RE/MAX Partners" style="width:100%;height:100%;object-fit:cover;object-position:top" />
+          </div>
+          <div style="padding:20px 16px">
+            <h4 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:#1a1a2e;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Jennifer Zuniga</h4>
+            <p style="font-size:.82rem;color:#cc0000;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px">Corona Office Assistant</p>
+            <a href="tel:9512788755" style="display:block;font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:800;color:#1a1a2e;margin-bottom:6px;text-decoration:none">951.278.8755</a>
+            <a href="mailto:jzunigaRemaxpartners@yahoo.com" style="display:block;font-size:.82rem;color:#003da5;font-weight:600;text-decoration:none">jzunigaRemaxpartners@yahoo.com</a>
+          </div>
+        </div>
+
+        <!-- Dave Larsen -->
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.10);text-align:center;transition:transform .35s,box-shadow .35s" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 8px 40px rgba(0,0,0,.16)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 24px rgba(0,0,0,.10)'">
+          <div style="width:100%;aspect-ratio:1;overflow:hidden;background:#f0f2f5">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/MlcpZvAsngYexEuf.jpg" alt="Dave Larsen — Tustin Office Manager, RE/MAX Partners" style="width:100%;height:100%;object-fit:cover;object-position:top" />
+          </div>
+          <div style="padding:20px 16px">
+            <h4 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:#1a1a2e;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Dave Larsen</h4>
+            <p style="font-size:.82rem;color:#003da5;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px">Tustin Office Manager</p>
+            <a href="tel:9095180668" style="display:block;font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:800;color:#1a1a2e;margin-bottom:6px;text-decoration:none">909.518.0668</a>
+            <a href="mailto:larsengroup@aol.com" style="display:block;font-size:.82rem;color:#003da5;font-weight:600;text-decoration:none">larsengroup@aol.com</a>
+          </div>
+        </div>
+
+      </div>
+      <!-- Mobile responsive override -->
+      <style>@media(max-width:768px){.leadership-grid{grid-template-columns:repeat(2,1fr)!important}@media(max-width:480px){.leadership-grid{grid-template-columns:1fr!important}}}</style>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="images/remax-logo.png" alt="RE/MAX Partners" class="footer-logo" />
+      <div>
+        <div class="footer-brand-text"><span class="footer-brand-remax">RE/MAX</span> <span class="footer-brand-partners">PARTNERS</span></div>
         <p class="footer-tagline">Outstanding Agents. Outstanding Results.<sup>®</sup></p>
         <p class="footer-legal">Each Office Independently Owned and Operated.<br>License #01792182</p>
         <div class="footer-social">
@@ -400,18 +429,27 @@
           <li><i class="fas fa-map-marker-alt"></i> 434 N. Main St. #107, Corona, CA 92878</li>
           <li><i class="fas fa-map-marker-alt"></i> 250 W. Main St. #203, Tustin, CA 92780</li>
           <li><i class="fas fa-phone"></i> <a href="tel:9512788755">(951) 278-8755</a></li>
-          
+          <li><i class="fas fa-phone"></i> <a href="tel:7148844626">(714) 884-4626</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <p>&copy; 2026 RE/MAX Partners. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
-        <p><i class="fas fa-home"></i> Equal Housing Opportunity</p>
+        <p>Each Office Independently Owned and Operated.</p>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const header=document.getElementById('header');
+    if(header){window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>60)})}
+    const hamburger=document.getElementById('hamburger');
+    const nav=document.getElementById('nav');
+    if(hamburger&&nav){
+      hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');nav.classList.toggle('open')});
+      nav.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{hamburger.classList.remove('open');nav.classList.remove('open')}));
+    }
+  </script>
 </body>
 </html>

@@ -3,7 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RE/MAX Partners | Corona &amp; Tustin, CA</title>
+  <title>RE/MAX Partners | Tustin & Corona, CA Real Estate Agents</title>
+  <meta name="description" content="RE/MAX Partners connects Orange County and Inland Empire buyers & sellers with top local agents in Tustin and Corona, CA. Search homes, get a free valuation, talk to an expert." />
+  <meta name="robots" content="index, follow" />
+  <meta name="google-site-verification" content="google32ae3e424660372d" />
+  <link rel="canonical" href="https://www.remaxpartners.com/" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="RE/MAX Partners | Tustin & Corona, CA Real Estate Agents" />
+  <meta property="og:description" content="Top-rated real estate agents serving Tustin, Corona, and all of Orange County & Inland Empire. Search homes for sale, get a free home valuation." />
+  <meta property="og:url" content="https://www.remaxpartners.com/" />
+  <meta property="og:site_name" content="RE/MAX Partners" />
+  <meta property="og:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/erXUjFsIWqmooNMz.png" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RE/MAX Partners | Tustin & Corona, CA Real Estate Agents" />
+  <meta name="twitter:description" content="Top-rated real estate agents serving Tustin, Corona, and all of Orange County & Inland Empire. Search homes for sale, get a free home valuation." />
   <meta name="description" content="RE/MAX Partners – Southern California's premier real estate brokerage serving Riverside and Orange Counties for over 30 years." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,11 +62,11 @@
     .brand{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
     .brand-logo{height:38px;width:auto}
     .brand-sub{font-family:'Montserrat',sans-serif;font-weight:900;font-size:.95rem;color:var(--red);letter-spacing:3px;text-transform:uppercase;white-space:nowrap}
-    .nav{flex:1}
-    .nav ul{display:flex;align-items:center;justify-content:flex-end;gap:2px;flex-wrap:nowrap;white-space:nowrap}
-    .nav ul li a{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.4px;padding:7px 9px;border-radius:6px;color:var(--dark);transition:all var(--transition);white-space:nowrap;display:block}
+    .nav{flex:1;min-width:0}
+    .nav ul{display:flex;align-items:center;justify-content:flex-end;gap:1px;flex-wrap:nowrap;white-space:nowrap;overflow:visible}
+    .nav ul li a{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.7rem;text-transform:uppercase;letter-spacing:.3px;padding:6px 8px;border-radius:6px;color:var(--dark);transition:all var(--transition);white-space:nowrap;display:block}
     .nav ul li a:hover,.nav ul li a.active{color:var(--red);background:rgba(204,0,0,.07)}
-    .nav ul li a.nav-cta{background:var(--red);color:var(--white);border-radius:50px;padding:8px 14px;margin-left:4px}
+    .nav ul li a.nav-cta{background:var(--red);color:var(--white);border-radius:50px;padding:7px 12px;margin-left:4px}
     .nav ul li a.nav-cta:hover{background:var(--red-dark);color:var(--white)}
     .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;flex-shrink:0;z-index:1001}
     .hamburger span{display:block;width:26px;height:2.5px;background:var(--dark);border-radius:2px;transition:all var(--transition)}
@@ -102,15 +117,15 @@
     /* About */
     .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
     .about-img-wrap{position:relative;border-radius:var(--radius);overflow:visible}
-    .award-card{background:linear-gradient(160deg,#0a1628 0%,#1a2a4a 60%,#0d1f3c 100%);border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35),0 0 0 1px rgba(212,175,55,.25);width:100%;height:420px;display:flex;flex-direction:column;position:relative}
-    .award-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(212,175,55,.12) 0%,transparent 65%);pointer-events:none}
-    .award-card-header{display:flex;align-items:center;justify-content:center;gap:10px;padding:22px 24px 14px;border-bottom:1px solid rgba(212,175,55,.2);position:relative;z-index:1}
+    .award-card{background:linear-gradient(160deg,#0a1628 0%,#1a2a4a 60%,#0d1f3c 100%);border-radius:20px;overflow:visible;box-shadow:0 20px 60px rgba(0,0,0,.35),0 0 0 1px rgba(212,175,55,.25);width:100%;min-height:520px;display:flex;flex-direction:column;position:relative}
+    .award-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(212,175,55,.18) 0%,transparent 65%);pointer-events:none}
+    .award-card-header{display:flex;align-items:center;justify-content:center;gap:10px;padding:24px 24px 16px;border-bottom:1px solid rgba(212,175,55,.25);position:relative;z-index:1}
     .award-card-logo{height:38px;width:auto;filter:brightness(0) invert(1)}
     .award-card-name{font-family:'Montserrat',sans-serif;font-size:1.4rem;font-weight:900;letter-spacing:.18em;color:#fff;text-transform:uppercase}
-    .award-card-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 20px 20px;position:relative;z-index:1}
-    .award-trophy-large{width:200px;height:auto;filter:drop-shadow(0 8px 24px rgba(212,175,55,.45));transition:transform .4s ease}
-    .award-card:hover .award-trophy-large{transform:scale(1.05) translateY(-4px)}
-    .award-card-title{font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:700;color:#d4af37;text-align:center;letter-spacing:.06em;text-transform:uppercase;margin-top:12px;line-height:1.4}
+    .award-card-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 20px 24px;position:relative;z-index:1}
+    .award-trophy-large{width:220px;height:auto;filter:drop-shadow(0 12px 32px rgba(212,175,55,.6)) drop-shadow(0 0 60px rgba(212,175,55,.2));transition:transform .4s ease;mix-blend-mode:normal;background:transparent}
+    .award-card:hover .award-trophy-large{transform:scale(1.06) translateY(-6px)}
+    .award-card-title{font-family:'Montserrat',sans-serif;font-size:1.4rem;font-weight:900;color:#f0c040;text-align:center;letter-spacing:.08em;text-transform:uppercase;margin-top:20px;margin-bottom:16px;line-height:1.4;text-shadow:0 2px 16px rgba(212,175,55,.7),0 0 30px rgba(212,175,55,.3)}
     .about-text{padding-left:16px}
     .about-text h2{font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:800;color:var(--dark);margin-bottom:20px}
     .about-text p{color:var(--mid-gray);margin-bottom:16px}
@@ -218,6 +233,116 @@
       .about-text{padding-left:0}
     }
   </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": [
+        "Organization",
+        "RealEstateAgency"
+      ],
+      "name": "RE/MAX Partners",
+      "legalName": "RE/MAX Partners",
+      "url": "https://www.remaxpartners.com",
+      "logo": "https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/erXUjFsIWqmooNMz.png",
+      "image": "https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/erXUjFsIWqmooNMz.png",
+      "description": "RE/MAX Partners is an award-winning real estate brokerage with offices in Tustin and Corona, CA, serving Orange County and Inland Empire buyers and sellers.",
+      "foundingDate": "1992",
+      "areaServed": [
+        "Tustin, CA",
+        "Irvine, CA",
+        "Santa Ana, CA",
+        "Orange, CA",
+        "Anaheim, CA",
+        "Anaheim Hills, CA",
+        "Lake Forest, CA",
+        "Villa Park, CA",
+        "North Tustin, CA",
+        "Corona, CA",
+        "Eastvale, CA",
+        "Norco, CA",
+        "Riverside, CA",
+        "Chino Hills, CA",
+        "Jurupa Valley, CA",
+        "Lake Elsinore, CA",
+        "Temescal Valley, CA"
+      ],
+      "location": [
+        {
+          "@type": "Place",
+          "name": "RE/MAX Partners - Tustin Office",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "250 W. Main St. #203",
+            "addressLocality": "Tustin",
+            "addressRegion": "CA",
+            "postalCode": "92780",
+            "addressCountry": "US"
+          },
+          "telephone": "+17148844626"
+        },
+        {
+          "@type": "Place",
+          "name": "RE/MAX Partners - Corona Office",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "434 N. Main St. #107",
+            "addressLocality": "Corona",
+            "addressRegion": "CA",
+            "postalCode": "92878",
+            "addressCountry": "US"
+          },
+          "telephone": "+19512788755"
+        }
+      ],
+      "sameAs": [
+        "https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450",
+        "https://www.remax.com/usa/en/residential/office/tustin/remax-partners-100766001"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is RE/MAX Partners located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RE/MAX Partners has two offices in Southern California: 434 N. Main St. #107, Corona, CA 92878 (phone: 951-278-8755) and 250 W. Main St. #203, Tustin, CA 92780 (phone: 714-884-4626)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What cities does RE/MAX Partners serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RE/MAX Partners serves buyers and sellers across Orange County and Inland Empire, including Tustin, Irvine, Santa Ana, Orange, Anaheim Hills, Lake Forest, Villa Park, North Tustin, Corona, Eastvale, Norco, Riverside, Chino Hills, Jurupa Valley, Lake Elsinore, and Temescal Valley, CA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I contact RE/MAX Partners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call RE/MAX Partners' Corona office at (951) 278-8755 or the Tustin office at (714) 884-4626. You can also visit remaxpartners.com to search listings, request a home valuation, or connect with an agent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is RE/MAX Partners an award-winning real estate office?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. RE/MAX Partners has earned the RE/MAX Most Distinguished Office Award, recognizing excellence in service, production, and community involvement across both the Tustin and Corona offices."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -301,12 +426,13 @@
     <div class="container about-grid">
       <div class="about-img-wrap">
         <div class="award-card">
-          <div class="award-card-header">
-            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/erXUjFsIWqmooNMz.png" alt="RE/MAX Partners" class="award-card-logo" />
-            <span class="award-card-name">PARTNERS</span>
-          </div>
+      <div class="award-card-header">
+        <span style="font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:900;letter-spacing:.05em;line-height:1">
+          <span style="color:#cc0000">RE/MAX</span><span style="color:#fff"> PARTNERS</span>
+        </span>
+      </div>
           <div class="award-card-body">
-            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/oUaDlPLXqEvooEUf.png" alt="Most Distinguished Office Award Trophy" class="award-trophy-large" />
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/VldnqDkXelVVmFKA.png" alt="Most Distinguished Office Award Trophy" class="award-trophy-large" />
             <p class="award-card-title">Most Distinguished<br>Office Award</p>
           </div>
         </div>
@@ -391,10 +517,82 @@
   </section>
 
   <!-- FOOTER -->
+  <!-- Leadership Team Section -->
+  <section style="padding:80px 0;background:#f8f9fa">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:50px">
+        <span style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:3px;text-transform:uppercase;color:#cc0000;display:block;margin-bottom:10px">Our Leadership</span>
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;color:#1a1a2e;margin-bottom:14px">Meet Our Leadership Team</h2>
+        <p style="color:#6c757d;max-width:600px;margin:0 auto;font-size:1.05rem">The experienced professionals leading RE/MAX Partners across our Tustin and Corona offices.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
+
+        <!-- Sharon Rotondo -->
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.10);text-align:center;transition:transform .35s,box-shadow .35s" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 8px 40px rgba(0,0,0,.16)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 24px rgba(0,0,0,.10)'">
+          <div style="width:100%;aspect-ratio:1;overflow:hidden;background:#f0f2f5">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/IUqiWHvXmVaCJcha.jpg" alt="Sharon Rotondo — President/Owner, RE/MAX Partners" style="width:100%;height:100%;object-fit:cover;object-position:top" />
+          </div>
+          <div style="padding:20px 16px">
+            <h4 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:#1a1a2e;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Sharon Rotondo</h4>
+            <p style="font-size:.82rem;color:#cc0000;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px">President / Owner</p>
+            <a href="tel:9512788755" style="display:block;font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:800;color:#1a1a2e;margin-bottom:6px;text-decoration:none">951.278.8755</a>
+            <a href="mailto:slrotondo@earthlink.net" style="display:block;font-size:.82rem;color:#003da5;font-weight:600;text-decoration:none">slrotondo@earthlink.net</a>
+          </div>
+        </div>
+
+        <!-- Jillene Wasson -->
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.10);text-align:center;transition:transform .35s,box-shadow .35s" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 8px 40px rgba(0,0,0,.16)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 24px rgba(0,0,0,.10)'">
+          <div style="width:100%;aspect-ratio:1;overflow:hidden;background:#f0f2f5">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/IHRNiBAPlpLFhodM.jpg" alt="Jillene Wasson — Broker, RE/MAX Partners" style="width:100%;height:100%;object-fit:cover;object-position:top" />
+          </div>
+          <div style="padding:20px 16px">
+            <h4 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:#1a1a2e;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Jillene Wasson</h4>
+            <p style="font-size:.82rem;color:#cc0000;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px">Broker</p>
+            <a href="tel:9519071727" style="display:block;font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:800;color:#1a1a2e;margin-bottom:6px;text-decoration:none">951.907.1727</a>
+            <a href="mailto:Jill@remaxpartners.com" style="display:block;font-size:.82rem;color:#003da5;font-weight:600;text-decoration:none">Jill@remaxpartners.com</a>
+          </div>
+        </div>
+
+        <!-- Jennifer Zuniga -->
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.10);text-align:center;transition:transform .35s,box-shadow .35s" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 8px 40px rgba(0,0,0,.16)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 24px rgba(0,0,0,.10)'">
+          <div style="width:100%;aspect-ratio:1;overflow:hidden;background:#f0f2f5">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/TKZSudLBdbTPcLyT.jpg" alt="Jennifer Zuniga — Corona Office Assistant, RE/MAX Partners" style="width:100%;height:100%;object-fit:cover;object-position:top" />
+          </div>
+          <div style="padding:20px 16px">
+            <h4 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:#1a1a2e;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Jennifer Zuniga</h4>
+            <p style="font-size:.82rem;color:#cc0000;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px">Corona Office Assistant</p>
+            <a href="tel:9512788755" style="display:block;font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:800;color:#1a1a2e;margin-bottom:6px;text-decoration:none">951.278.8755</a>
+            <a href="mailto:jzunigaRemaxpartners@yahoo.com" style="display:block;font-size:.82rem;color:#003da5;font-weight:600;text-decoration:none">jzunigaRemaxpartners@yahoo.com</a>
+          </div>
+        </div>
+
+        <!-- Dave Larsen -->
+        <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.10);text-align:center;transition:transform .35s,box-shadow .35s" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 8px 40px rgba(0,0,0,.16)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 24px rgba(0,0,0,.10)'">
+          <div style="width:100%;aspect-ratio:1;overflow:hidden;background:#f0f2f5">
+            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/MlcpZvAsngYexEuf.jpg" alt="Dave Larsen — Tustin Office Manager, RE/MAX Partners" style="width:100%;height:100%;object-fit:cover;object-position:top" />
+          </div>
+          <div style="padding:20px 16px">
+            <h4 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;color:#1a1a2e;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Dave Larsen</h4>
+            <p style="font-size:.82rem;color:#003da5;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px">Tustin Office Manager</p>
+            <a href="tel:9095180668" style="display:block;font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:800;color:#1a1a2e;margin-bottom:6px;text-decoration:none">909.518.0668</a>
+            <a href="mailto:larsengroup@aol.com" style="display:block;font-size:.82rem;color:#003da5;font-weight:600;text-decoration:none">larsengroup@aol.com</a>
+          </div>
+        </div>
+
+      </div>
+      <!-- Mobile responsive override -->
+      <style>@media(max-width:768px){.leadership-grid{grid-template-columns:repeat(2,1fr)!important}@media(max-width:480px){.leadership-grid{grid-template-columns:1fr!important}}}</style>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/erXUjFsIWqmooNMz.png" alt="RE/MAX Partners" class="footer-logo" />
+        <div style="margin-bottom:16px;display:flex;align-items:center;gap:10px">
+          <span style="font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:900;letter-spacing:.04em;line-height:1">
+            <span style="color:#cc0000">RE/MAX</span><span style="color:#fff"> PARTNERS</span>
+          </span>
+        </div>
         <p class="footer-tagline">Outstanding Agents. Outstanding Results.<sup>®</sup></p>
         <p class="footer-legal">Each Office Independently Owned and Operated.<br>License #01792182</p>
         <div class="footer-social">
