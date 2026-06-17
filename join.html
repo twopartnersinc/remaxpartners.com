@@ -1,57 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
+<head><meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Join Our Team | RE/MAX Partners</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Join Our Team | RE/MAX Partners – Tustin & Corona CA</title>
+  <meta name="description" content="Join the RE/MAX Partners team in Tustin or Corona, CA. We offer industry-leading commission structures, training, and a collaborative environment. Apply today." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.remaxpartners.com/join.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Join Our Team | RE/MAX Partners" />
+  <meta property="og:description" content="Join the RE/MAX Partners team. Industry-leading commissions, training, and support in Tustin & Corona, CA." />
+  <meta property="og:url" content="https://www.remaxpartners.com/join.html" />
+  <meta property="og:site_name" content="RE/MAX Partners" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root{--red:#cc0000;--red-dark:#a30000;--blue:#003da5;--mid-gray:#6c757d;--dark:#1a1a2e;--shadow:0 4px 24px rgba(0,0,0,.10);--transition:0.35s cubic-bezier(0.4,0,0.2,1)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Open Sans',sans-serif;color:#2d2d2d;background:#fff;line-height:1.7;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    h1,h2,h3,h4,h5{font-family:'Montserrat',sans-serif;line-height:1.2}
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:50px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;border:2px solid transparent;transition:all var(--transition);white-space:nowrap}
+    .btn-primary{background:var(--red);color:#fff;border-color:var(--red)}
+    .btn-primary:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 6px 20px rgba(204,0,0,.35)}
+    .btn-full{width:100%;justify-content:center}
+    .topbar{background:var(--dark);color:#ccc;font-size:.82rem;padding:8px 0}
+    .topbar-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+    .topbar a{color:#ddd;transition:color var(--transition)}
+    .topbar a:hover{color:var(--red)}
+    .topbar i{margin-right:5px;color:var(--red)}
+    .header{position:sticky;top:0;z-index:999;background:#fff;box-shadow:0 2px 16px rgba(0,0,0,.10)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+    .brand{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
+    .brand-logo{height:38px;width:auto}
+    .brand-sub{font-family:'Montserrat',sans-serif;font-weight:900;font-size:.95rem;color:var(--red);letter-spacing:3px;text-transform:uppercase;white-space:nowrap}
+    .nav{flex:1;min-width:0}
+    .nav ul{display:flex;align-items:center;justify-content:flex-end;gap:1px;flex-wrap:nowrap}
+    .nav ul li a{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.7rem;text-transform:uppercase;letter-spacing:.3px;padding:6px 8px;border-radius:6px;color:var(--dark);transition:all var(--transition);white-space:nowrap;display:block}
+    .nav ul li a:hover,.nav ul li a.active{color:var(--red);background:rgba(204,0,0,.07)}
+    .nav ul li a.nav-cta{background:var(--red);color:#fff;border-radius:50px;padding:7px 12px;margin-left:4px}
+    .nav ul li a.nav-cta:hover{background:var(--red-dark)}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;flex-shrink:0;z-index:1001}
+    .hamburger span{display:block;width:26px;height:2.5px;background:var(--dark);border-radius:2px;transition:all var(--transition)}
+    .hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+    .section-eyebrow{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:10px;display:block}
+    /* HERO */
+    .page-hero{position:relative;min-height:480px;display:flex;align-items:center;overflow:hidden;background:#0a1628}
+    .page-hero-bg{position:absolute;inset:0;background-image:url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/nHHOcLXihbxrEdzv.jpg');background-size:cover;background-position:center 20%;opacity:.9}
+    .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,22,40,.60) 0%,rgba(10,22,40,.25) 60%,rgba(10,22,40,.45) 100%)}
+    .page-hero-content{position:relative;z-index:1;padding:90px 0;text-align:center}
+    .page-hero h1{font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:900;color:#fff;margin-bottom:16px;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+    .page-hero p{font-size:1.1rem;color:rgba(255,255,255,.9);max-width:640px;margin:0 auto;text-shadow:0 1px 6px rgba(0,0,0,.3)}
+    /* MAIN */
+    .join-section{padding:80px 0;background:#fff}
+    .join-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+    .join-text-panel h2{font-size:1.9rem;font-weight:800;color:var(--dark);margin-bottom:16px}
+    .join-text-panel p{color:#555;margin-bottom:16px;line-height:1.8}
+    .join-benefits{margin:20px 0 24px}
+    .join-benefits li{display:flex;align-items:flex-start;gap:10px;margin-bottom:11px;font-size:.95rem;color:#2d2d2d}
+    .join-benefits li i{color:var(--red);margin-top:3px;flex-shrink:0}
+    .join-quote{border-left:4px solid var(--red);padding:14px 20px;background:#fdf5f5;border-radius:0 8px 8px 0;font-style:italic;color:#555;margin-top:24px;font-size:.95rem}
+    /* FORM */
+    .join-form-panel{background:#f8f9fa;border-radius:16px;padding:40px 32px;box-shadow:var(--shadow)}
+    .join-form-panel h2{font-size:1.6rem;font-weight:800;color:var(--dark);margin-bottom:24px}
+    .form-group{margin-bottom:18px}
+    .form-group label{display:block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.5px;color:#555;margin-bottom:7px}
+    .form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 15px;border:2px solid #e0e0e0;border-radius:8px;font-family:'Open Sans',sans-serif;font-size:.93rem;color:#2d2d2d;transition:border-color var(--transition);outline:none;background:#fff}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--red)}
+    .form-group textarea{resize:vertical;min-height:110px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .form-note{font-size:.82rem;color:var(--mid-gray);text-align:center;margin-top:12px}
+    #form-success{display:none;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:8px;padding:20px;text-align:center;color:#2e7d32;font-weight:600;margin-top:16px}
+    /* STATS */
+    .join-stats{padding:64px 0;background:#f4f6fb}
+    .stats-section-header{text-align:center;margin-bottom:40px}
+    .stats-section-header h2{font-size:1.8rem;font-weight:800;color:var(--dark);margin-bottom:10px}
+    .stats-section-header p{color:var(--mid-gray)}
+    .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    .stat-card{background:#fff;border-radius:12px;padding:28px 20px;text-align:center;box-shadow:var(--shadow);border-top:4px solid var(--red)}
+    .stat-num{display:block;font-family:'Montserrat',sans-serif;font-weight:900;font-size:2.4rem;color:var(--red);line-height:1}
+    .stat-label{display:block;font-family:'Montserrat',sans-serif;font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:1px;color:#555;margin-top:8px}
+    /* FOOTER */
+    .footer{background:#0d0d1a;color:rgba(255,255,255,.75);padding-top:64px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
+    .footer-tagline{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;color:#fff;margin-bottom:8px;margin-top:8px}
+    .footer-legal{font-size:.78rem;opacity:.6;margin-bottom:20px}
+    .footer-social{display:flex;gap:12px}
+    .footer-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-size:.85rem;transition:all var(--transition)}
+    .footer-social a:hover{background:var(--red);color:#fff}
+    .footer-col h4{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:1px;color:#fff;margin-bottom:20px}
+    .footer-col ul li{margin-bottom:10px}
+    .footer-col ul li a{font-size:.88rem;color:rgba(255,255,255,.65);transition:color var(--transition)}
+    .footer-col ul li a:hover{color:var(--red)}
+    .footer-contact li{display:flex;gap:10px;font-size:.85rem;margin-bottom:12px;align-items:flex-start}
+    .footer-contact li i{color:var(--red);margin-top:3px;flex-shrink:0}
+    .footer-contact a{color:rgba(255,255,255,.65)}
+    .footer-contact a:hover{color:var(--red)}
+    .footer-bottom{padding:20px 0}
+    .footer-bottom-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:.8rem;color:rgba(255,255,255,.45)}
+    @media(max-width:900px){
+      .join-grid{grid-template-columns:1fr;gap:36px}
+      .stats-row{grid-template-columns:repeat(2,1fr)}
+      .footer-grid{grid-template-columns:1fr 1fr}
+      .hamburger{display:flex}
+      .nav{position:fixed;top:68px;left:0;right:0;background:#fff;box-shadow:0 8px 32px rgba(0,0,0,.15);padding:16px 24px 24px;transform:translateY(-120%);transition:transform .4s cubic-bezier(0.4,0,0.2,1);z-index:998;pointer-events:none}
+      .nav.open{transform:translateY(0);pointer-events:all}
+      .nav ul{flex-direction:column;align-items:stretch;gap:2px}
+      .nav ul li a{display:block;padding:13px 18px;font-size:.88rem;border-radius:8px;border-bottom:1px solid rgba(0,0,0,.05)}
+      .nav ul li a.nav-cta{margin:10px 0 0;text-align:center;border-radius:50px;border-bottom:none}
+    }
+    @media(max-width:768px){.footer-grid{grid-template-columns:1fr}.stats-row{grid-template-columns:1fr 1fr}}
+    @media(max-width:500px){.form-row{grid-template-columns:1fr}.stats-row{grid-template-columns:1fr 1fr}}
+  </style>
 </head>
 <body>
   <div class="topbar">
     <div class="container topbar-inner">
       <span><i class="fas fa-phone"></i> CORONA: <a href="tel:9512788755">(951) 278-8755</a> &nbsp;|&nbsp; TUSTIN: <a href="tel:7148844626">(714) 884-4626</a></span>
-      
     </div>
   </div>
   <header class="header" id="header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
-        <img src="images/remax-logo.png" alt="RE/MAX Partners Logo" class="brand-logo" />
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/erXUjFsIWqmooNMz.png" alt="RE/MAX Partners Logo" class="brand-logo" />
         <span class="brand-sub">PARTNERS</span>
       </a>
-      <nav class="nav" id="nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="corona.html">Corona</a></li>
-          <li><a href="tustin.html">Tustin</a></li>
-          <li><a href="agents.html">Our Agents</a></li>
-          <li><a href="https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450" target="_blank">Search Listings</a></li>
-          <li><a href="join.html" class="active">Join Our Team</a></li>
-          <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-        </ul>
-      </nav>
+      <nav class="nav" id="nav"><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="corona.html">Corona</a></li>
+        <li><a href="tustin.html">Tustin</a></li>
+        <li><a href="agents.html">Our Agents</a></li>
+        <li><a href="https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450" target="_blank">Search Listings</a></li>
+        <li><a href="join.html" class="active">Join Our Team</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul></nav>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
+  <!-- HERO with team photo via CDN -->
   <section class="page-hero">
+    <div class="page-hero-bg"></div>
     <div class="page-hero-overlay"></div>
     <div class="container page-hero-content">
+      <span class="section-eyebrow" style="color:#f0c040;font-size:.9rem">Grow With Us</span>
       <h1>Join RE/MAX Partners</h1>
-      <p>Be part of one of the most successful real estate agencies in Southern California.</p>
+      <p>Be part of one of Southern California's most successful real estate teams — with offices in Tustin &amp; Corona.</p>
     </div>
   </section>
 
-  <section class="join-section section-pad">
+  <!-- MAIN CONTENT -->
+  <section class="join-section">
     <div class="container join-grid">
+      <!-- Left: Benefits -->
       <div class="join-text-panel">
-        <p class="section-eyebrow">Grow With Us</p>
-        <h2>Your Career, Elevated</h2>
+        <span class="section-eyebrow">Your Career, Elevated</span>
+        <h2>Why Join RE/MAX Partners?</h2>
         <p>If you are looking to join a successful Real Estate agency, we are it. RE/MAX Partners will provide you with the tools to be the best you can be in this industry. Join our team and be part of one of the most successful agencies in Southern California.</p>
         <p>As a RE/MAX Partners agent, you will benefit from:</p>
         <ul class="join-benefits">
@@ -68,15 +179,31 @@
           "RE/MAX Partners... A win-win, collaborative, partnering relationship of professionals looking out for each other's best interests."
         </blockquote>
       </div>
+      <!-- Right: Application Form -->
       <div class="join-form-panel">
         <h2>Apply to Join Our Team</h2>
-        <form class="contact-form" id="join-form">
+        <form id="join-form" action="https://formsubmit.co/sjjpartnersinc@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Join Our Team Application - RE/MAX Partners" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://www.remaxpartners.com/join.html?submitted=1" />
           <div class="form-row">
-            <div class="form-group"><label>First Name *</label><input type="text" name="first_name" placeholder="Jane" required /></div>
-            <div class="form-group"><label>Last Name *</label><input type="text" name="last_name" placeholder="Doe" required /></div>
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" name="first_name" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" name="last_name" placeholder="Doe" required />
+            </div>
           </div>
-          <div class="form-group"><label>Email Address *</label><input type="email" name="email" placeholder="jane@example.com" required /></div>
-          <div class="form-group"><label>Phone Number *</label><input type="tel" name="phone" placeholder="(951) 555-1234" required /></div>
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" name="phone" placeholder="(951) 555-1234" required />
+          </div>
           <div class="form-group">
             <label>License Status</label>
             <select name="license_status">
@@ -86,44 +213,59 @@
               <option value="unlicensed">Not Yet Licensed</option>
             </select>
           </div>
-          <div class="form-group"><label>CA DRE License # (if applicable)</label><input type="text" name="dre" placeholder="DRE#XXXXXXXX" /></div>
-          <div class="form-group"><label>Years of Experience</label>
+          <div class="form-group">
+            <label>CA DRE License # (if applicable)</label>
+            <input type="text" name="dre" placeholder="DRE#XXXXXXXX" />
+          </div>
+          <div class="form-group">
+            <label>Years of Experience</label>
             <select name="experience">
               <option value="">Select</option>
               <option value="new">New to Real Estate</option>
-              <option value="1-3">1–3 Years</option>
-              <option value="3-5">3–5 Years</option>
-              <option value="5-10">5–10 Years</option>
+              <option value="1-3">1-3 Years</option>
+              <option value="3-5">3-5 Years</option>
+              <option value="5-10">5-10 Years</option>
               <option value="10+">10+ Years</option>
             </select>
           </div>
-          <div class="form-group"><label>Tell Us About Yourself *</label><textarea name="message" rows="4" placeholder="Share your background, goals, and why you want to join RE/MAX Partners..." required></textarea></div>
-          <button type="submit" class="btn btn-primary btn-full">Submit Application <i class="fas fa-paper-plane"></i></button>
-          <p class="form-note">We will contact you within 1–2 business days to discuss next steps.</p>
+          <div class="form-group">
+            <label>Tell Us About Yourself *</label>
+            <textarea name="message" rows="4" placeholder="Share your background, goals, and why you want to join RE/MAX Partners..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Submit Application &nbsp;<i class="fas fa-paper-plane"></i></button>
+          <p class="form-note">We will contact you within 1-2 business days to discuss next steps.</p>
         </form>
+        <div id="form-success"><i class="fas fa-check-circle" style="font-size:1.5rem;margin-bottom:8px;display:block"></i>Thank you! Your application has been submitted. We will be in touch within 1-2 business days.</div>
       </div>
     </div>
   </section>
 
-  <section class="join-stats section-pad bg-light">
+  <!-- STATS -->
+  <section class="join-stats">
     <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Why RE/MAX?</p>
+      <div class="stats-section-header">
+        <span class="section-eyebrow">Why RE/MAX?</span>
         <h2>The World's Most Productive Agents</h2>
+        <p>Join the brand that leads the industry in production, reach, and results.</p>
       </div>
-      <div class="stats-row stats-row-light">
-        <div class="stat stat-light"><span class="stat-num">#1</span><span class="stat-label">Real Estate Brand Worldwide</span></div>
-        <div class="stat stat-light"><span class="stat-num">140+</span><span class="stat-label">Countries &amp; Territories</span></div>
-        <div class="stat stat-light"><span class="stat-num">9,000+</span><span class="stat-label">Offices Worldwide</span></div>
-        <div class="stat stat-light"><span class="stat-num">35+</span><span class="stat-label">Years of Local Excellence</span></div>
+      <div class="stats-row">
+        <div class="stat-card"><span class="stat-num">#1</span><span class="stat-label">Real Estate Brand Worldwide</span></div>
+        <div class="stat-card" style="border-top-color:var(--blue)"><span class="stat-num" style="color:var(--blue)">140+</span><span class="stat-label">Countries &amp; Territories</span></div>
+        <div class="stat-card"><span class="stat-num">9,000+</span><span class="stat-label">Offices Worldwide</span></div>
+        <div class="stat-card" style="border-top-color:var(--blue)"><span class="stat-num" style="color:var(--blue)">35+</span><span class="stat-label">Years of Local Excellence</span></div>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="images/remax-logo.png" alt="RE/MAX Partners" class="footer-logo" />
+      <div>
+        <div style="margin-bottom:16px">
+          <span style="font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:900;letter-spacing:.04em;line-height:1">
+            <span style="color:#cc0000">RE/MAX</span><span style="color:#fff"> PARTNERS</span>
+          </span>
+        </div>
         <p class="footer-tagline">Outstanding Agents. Outstanding Results.<sup>®</sup></p>
         <p class="footer-legal">Each Office Independently Owned and Operated.<br>License #01792182</p>
         <div class="footer-social">
@@ -142,15 +284,17 @@
           <li><a href="tustin.html">Tustin</a></li>
           <li><a href="agents.html">Our Agents</a></li>
           <li><a href="https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450" target="_blank">Search Listings</a></li>
+          <li><a href="join.html">Join Our Team</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Contact Us</h4>
         <ul class="footer-contact">
-          <li><i class="fas fa-map-marker-alt"></i> 434 N. Main St. #107, Corona, CA 92878</li>
-          <li><i class="fas fa-phone"></i> <a href="tel:9512788755">(951) 278-8755</a></li>
-          
+          <li><i class="fas fa-map-marker-alt"></i><span>434 N. Main St. #107, Corona, CA 92878</span></li>
+          <li><i class="fas fa-phone"></i><a href="tel:9512788755">(951) 278-8755</a></li>
+          <li><i class="fas fa-map-marker-alt"></i><span>250 W. Main St. #203, Tustin, CA 92780</span></li>
+          <li><i class="fas fa-phone"></i><a href="tel:7148844626">(714) 884-4626</a></li>
         </ul>
       </div>
     </div>
@@ -161,6 +305,22 @@
       </div>
     </div>
   </footer>
-  <script src="script.js"></script>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+    nav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      nav.classList.remove('open');
+    }));
+    if (window.location.search.includes('submitted=1')) {
+      document.getElementById('join-form').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
