@@ -3,156 +3,292 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Agents | RE/MAX Partners</title>
-  <meta name="description" content="Meet the outstanding agents of RE/MAX Partners in Corona and Tustin, CA." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Our Real Estate Agents | RE/MAX Partners Tustin & Corona CA</title>
+  <meta name="description" content="Meet the experienced RE/MAX Partners real estate agents serving Tustin, Corona, and all of Orange County and Inland Empire. Find your local agent today." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.remaxpartners.com/agents.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Our Real Estate Agents | RE/MAX Partners Tustin & Corona CA" />
+  <meta property="og:description" content="33 experienced real estate professionals serving Orange County and Riverside County from RE/MAX Partners offices in Tustin and Corona, CA." />
+  <meta property="og:url" content="https://www.remaxpartners.com/agents.html" />
+  <meta property="og:site_name" content="RE/MAX Partners" />
+  <meta property="og:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/erXUjFsIWqmooNMz.png" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Our Real Estate Agents | RE/MAX Partners Tustin & Corona CA" />
+  <meta name="twitter:description" content="33 experienced real estate professionals serving Orange County and Riverside County from RE/MAX Partners offices in Tustin and Corona, CA." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root{--red:#cc0000;--red-dark:#a30000;--blue:#003da5;--blue-dark:#002d7a;--mid-gray:#6c757d;--dark:#1a1a2e;--shadow:0 4px 24px rgba(0,0,0,.10);--shadow-lg:0 8px 40px rgba(0,0,0,.16);--radius:10px;--transition:0.35s cubic-bezier(0.4,0,0.2,1)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Open Sans',sans-serif;color:#2d2d2d;background:#fff;line-height:1.7;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    h1,h2,h3,h4,h5{font-family:'Montserrat',sans-serif;line-height:1.2}
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:50px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;border:2px solid transparent;transition:all var(--transition);white-space:nowrap}
+    .btn-primary{background:var(--red);color:#fff;border-color:var(--red)}
+    .btn-primary:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 6px 20px rgba(204,0,0,.35)}
+    .btn-outline-white{background:transparent;color:#fff;border-color:#fff}
+    .btn-outline-white:hover{background:#fff;color:var(--red);transform:translateY(-2px)}
+    .btn-lg{padding:16px 36px;font-size:1.05rem}
+    .topbar{background:var(--dark);color:#ccc;font-size:.82rem;padding:8px 0}
+    .topbar-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+    .topbar a{color:#ddd;transition:color var(--transition)}
+    .topbar a:hover{color:var(--red)}
+    .topbar i{margin-right:5px;color:var(--red)}
+    .header{position:sticky;top:0;z-index:999;background:#fff;box-shadow:0 2px 16px rgba(0,0,0,.10)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px;flex-wrap:nowrap}
+    .brand{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
+    .brand-logo{height:38px;width:auto}
+    .brand-sub{font-family:'Montserrat',sans-serif;font-weight:900;font-size:.95rem;color:var(--red);letter-spacing:3px;text-transform:uppercase;white-space:nowrap}
+    .nav{flex:1;min-width:0}
+    .nav ul{display:flex;align-items:center;justify-content:flex-end;gap:1px;flex-wrap:nowrap;white-space:nowrap}
+    .nav ul li a{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.7rem;text-transform:uppercase;letter-spacing:.3px;padding:6px 8px;border-radius:6px;color:var(--dark);transition:all var(--transition);white-space:nowrap;display:block}
+    .nav ul li a:hover,.nav ul li a.active{color:var(--red);background:rgba(204,0,0,.07)}
+    .nav ul li a.nav-cta{background:var(--red);color:#fff;border-radius:50px;padding:7px 12px;margin-left:4px}
+    .nav ul li a.nav-cta:hover{background:var(--red-dark)}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;flex-shrink:0;z-index:1001}
+    .hamburger span{display:block;width:26px;height:2.5px;background:var(--dark);border-radius:2px;transition:all var(--transition)}
+    .hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+    .section-eyebrow{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:10px;display:block}
+    .page-hero{position:relative;background:linear-gradient(135deg,#0a1628 0%,#1a2a4a 60%,#0d1f3c 100%);padding:100px 0 80px;text-align:center;overflow:hidden}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(204,0,0,.18) 0%,transparent 65%)}
+    .page-hero-content{position:relative;z-index:1}
+    .page-hero h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:#fff;margin-bottom:16px}
+    .page-hero p{font-size:1.1rem;color:rgba(255,255,255,.8);max-width:600px;margin:0 auto}
+    .section-header{text-align:center;margin-bottom:50px}
+    .section-header h2{font-size:2rem;font-weight:800;color:#1a1a2e;margin-bottom:14px}
+    .section-header p{color:var(--mid-gray);max-width:600px;margin:0 auto}
+    .footer{background:#0d0d1a;color:rgba(255,255,255,.75);padding-top:64px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
+    .footer-brand-remax{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:900;color:#cc0000}
+    .footer-brand-partners{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:900;color:#fff;letter-spacing:.15em}
+    .footer-tagline{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;color:#fff;margin-bottom:8px;margin-top:8px}
+    .footer-legal{font-size:.78rem;opacity:.6;margin-bottom:20px}
+    .footer-social{display:flex;gap:12px}
+    .footer-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-size:.85rem;transition:all var(--transition)}
+    .footer-social a:hover{background:var(--red);color:#fff}
+    .footer-col h4{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:1px;color:#fff;margin-bottom:20px}
+    .footer-col ul li{margin-bottom:10px}
+    .footer-col ul li a{font-size:.88rem;color:rgba(255,255,255,.65);transition:color var(--transition)}
+    .footer-col ul li a:hover{color:var(--red)}
+    .footer-contact li{display:flex;gap:10px;font-size:.85rem;margin-bottom:12px;align-items:flex-start}
+    .footer-contact li i{color:var(--red);margin-top:3px;flex-shrink:0}
+    .footer-contact a{color:rgba(255,255,255,.65)}
+    .footer-contact a:hover{color:var(--red)}
+    .footer-bottom{padding:20px 0}
+    .footer-bottom-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:.8rem;color:rgba(255,255,255,.45)}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}.hamburger{display:flex}.nav{position:fixed;top:68px;left:0;right:0;background:#fff;box-shadow:0 8px 32px rgba(0,0,0,.15);padding:16px 24px 24px;transform:translateY(-120%);transition:transform .4s cubic-bezier(0.4,0,0.2,1);z-index:998;pointer-events:none}.nav.open{transform:translateY(0);pointer-events:all}.nav ul{flex-direction:column;align-items:stretch;gap:2px;white-space:normal}.nav ul li a{display:block;padding:13px 18px;font-size:.88rem;border-radius:8px;border-bottom:1px solid rgba(0,0,0,.05)}.nav ul li a.nav-cta{margin:10px 0 0;text-align:center;border-radius:50px;border-bottom:none}}
+    @media(max-width:768px){.footer-grid{grid-template-columns:1fr}}
+    .agents-section{padding:80px 0;background:#f8f9fa}
+    .agents-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    .agent-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:all var(--transition);text-align:center}
+    .agent-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+    .agent-photo-wrap{width:100%;aspect-ratio:1;overflow:hidden;background:#f0f2f5}
+    .agent-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s ease}
+    .agent-card:hover .agent-photo-wrap img{transform:scale(1.05)}
+    .agent-initials{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--red),var(--blue))}
+    .agent-info{padding:18px 14px}
+    .agent-info h4{font-size:.95rem;font-weight:700;color:var(--dark);margin-bottom:4px}
+    .agent-title{font-size:.78rem;color:var(--red);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+    .agent-phone{font-size:.82rem;color:var(--blue);font-weight:600;display:block}
+    .office-badge{display:inline-block;padding:3px 10px;border-radius:50px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+    .badge-corona{background:rgba(204,0,0,.1);color:var(--red)}
+    .badge-tustin{background:rgba(0,61,165,.1);color:var(--blue)}
+    .filter-bar{display:flex;gap:12px;justify-content:center;margin-bottom:40px;flex-wrap:wrap}
+    .filter-btn{padding:10px 24px;border-radius:50px;border:2px solid #ddd;background:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;transition:all var(--transition)}
+    .filter-btn.active,.filter-btn:hover{border-color:var(--red);color:var(--red);background:rgba(204,0,0,.06)}
+    @media(max-width:900px){.agents-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:600px){.agents-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:400px){.agents-grid{grid-template-columns:1fr}}
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "RE/MAX Partners Real Estate Agents",
+  "description": "Meet the experienced real estate agents at RE/MAX Partners serving Orange County and Inland Empire from offices in Tustin and Corona, CA.",
+  "url": "https://www.remaxpartners.com/agents.html",
+  "numberOfItems": 33,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "RealEstateAgent",
+        "name": "Jillene Wasson",
+        "worksFor": {
+          "@type": "RealEstateAgency",
+          "name": "RE/MAX Partners"
+        },
+        "areaServed": "Corona, CA",
+        "telephone": "(951) 907-1727"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "RealEstateAgent",
+        "name": "Dave Larsen",
+        "worksFor": {
+          "@type": "RealEstateAgency",
+          "name": "RE/MAX Partners"
+        },
+        "areaServed": "Tustin, CA",
+        "telephone": "(714) 884-4626"
+      }
+    }
+  ]
+},
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Corona Real Estate",
+      "url": "https://coronarealestate.com",
+      "description": "Search homes for sale in Corona, CA. Browse listings, get market reports, and connect with top Corona real estate agents.",
+      "about": {
+        "@type": "Place",
+        "name": "Corona, California",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Corona",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        }
+      }
+    }
+  </script>
 </head>
 <body>
-
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span><i class="fas fa-phone"></i> CORONA: <a href="tel:9512788755">(951) 278-8755</a> &nbsp;|&nbsp; TUSTIN: <a href="tel:7148844626">(714) 884-4626</a></span>
-      
-    </div>
-  </div>
-
+  <div class="topbar"><div class="container topbar-inner"><span><i class="fas fa-phone"></i> CORONA: <a href="tel:9512788755">(951) 278-8755</a> &nbsp;|&nbsp; TUSTIN: <a href="tel:7148844626">(714) 884-4626</a></span></div></div>
   <header class="header" id="header">
     <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <img src="images/remax-logo.png" alt="RE/MAX Partners Logo" class="brand-logo" />
-        <span class="brand-sub">PARTNERS</span>
-      </a>
-      <nav class="nav" id="nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="corona.html">Corona</a></li>
-          <li><a href="tustin.html">Tustin</a></li>
-          <li><a href="agents.html" class="active">Our Agents</a></li>
-          <li><a href="https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450" target="_blank">Search Listings</a></li>
-          <li><a href="join.html">Join Our Team</a></li>
-          <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-        </ul>
-      </nav>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="index.html" class="brand"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/erXUjFsIWqmooNMz.png" alt="RE/MAX Partners Logo" class="brand-logo" /><span class="brand-sub">PARTNERS</span></a>
+      <nav class="nav" id="nav"><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="corona.html">Corona</a></li>
+        <li><a href="tustin.html">Tustin</a></li>
+        <li><a href="agents.html" class="active">Our Agents</a></li>
+        <li><a href="https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450" target="_blank">Search Listings</a></li>
+        <li><a href="join.html">Join Our Team</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul></nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
   </header>
-
-  <!-- PAGE HERO -->
   <section class="page-hero">
-    <div class="page-hero-overlay"></div>
     <div class="container page-hero-content">
-      <h1>Our Outstanding Agents</h1>
-      <p>Meet the dedicated professionals who make RE/MAX Partners Southern California's most trusted brokerage.</p>
+      <span class="section-eyebrow" style="color:#f0c040">Meet The Team</span>
+      <h1>Our Agents</h1>
+      <p>33 experienced professionals serving Orange &amp; Riverside Counties.</p>
     </div>
   </section>
-
-  <!-- AGENTS SECTION -->
-  <section class="agents-full section-pad">
+  <section class="agents-section">
     <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">The Team</p>
-        <h2>25 Professionals Ready to Serve You</h2>
-        <p class="section-desc">Our agents are licensed, experienced, and passionate about helping you achieve your real estate goals across Riverside and Orange Counties.</p>
+      <div class="section-header"><span class="section-eyebrow">Our Team</span><h2>Find Your Agent</h2><p>Our agents are experts in their local markets and dedicated to your success.</p></div>
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterAgents('all',this)">All Agents</button>
+        <button class="filter-btn" onclick="filterAgents('corona',this)"><i class="fas fa-map-marker-alt" style="margin-right:5px"></i>Corona Office</button>
+        <button class="filter-btn" onclick="filterAgents('tustin',this)"><i class="fas fa-map-marker-alt" style="margin-right:5px"></i>Tustin Office</button>
       </div>
-
-      <!-- Leadership -->
-      <div class="agents-leadership">
-        <h3 class="agents-group-title"><span>Leadership</span></h3>
-        <div class="agents-grid agents-grid-leadership">
-          <div class="agent-card">
-            <div class="agent-photo-wrap">
-              <img src="https://papiphotos.remax-im.com/Person/100073782/MainPhoto_cropped/MainPhoto_cropped.jpg" alt="Jillene Wasson" class="agent-photo" loading="lazy" />
-            </div>
-            <div class="agent-info">
-              <h4>Jillene Wasson</h4>
-              <p class="agent-title">Owner / Broker</p>
-              <p class="agent-dre">DRE#01432341</p>
-              <a href="tel:9519071727" class="agent-phone"><i class="fas fa-phone"></i> (951) 907-1727</a>
-              <a href="mailto:Jill@remaxpartners.com" class="agent-email"><i class="fas fa-envelope"></i> Jill@remaxpartners.com</a>
-              <a href="https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450" target="_blank" class="btn btn-sm btn-primary">View Profile</a>
-            </div>
-          </div>
-        </div>
+      <div style="display:flex;gap:16px;justify-content:center;margin-bottom:40px;flex-wrap:wrap" id="office-links">
+        <a href="https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450" target="_blank" class="btn" style="background:rgba(204,0,0,.08);color:var(--red);border:2px solid var(--red);font-size:.82rem;padding:9px 20px"><i class="fas fa-external-link-alt"></i> View Corona Agents on RE/MAX.com</a>
+        <a href="https://www.remax.com/usa/en/residential/office/tustin/remax-partners-100766001" target="_blank" class="btn" style="background:rgba(0,61,165,.08);color:var(--blue);border:2px solid var(--blue);font-size:.82rem;padding:9px 20px"><i class="fas fa-external-link-alt"></i> View Tustin Agents on RE/MAX.com</a>
       </div>
-
-      <!-- All Agents -->
-      <div class="agents-all">
-        <h3 class="agents-group-title"><span>Sales Associates</span></h3>
-        <div class="agents-grid" id="all-agents-grid">
-          <!-- Populated by script.js -->
-        </div>
-      </div>
-
-      <div class="section-cta" style="margin-top:3rem;">
-        <p style="font-size:1.1rem; color:#555; margin-bottom:1rem;">Looking for a specific agent or want to connect with our team?</p>
-        <a href="contact.html" class="btn btn-primary">Contact Our Office</a>
-        <a href="https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450" target="_blank" class="btn btn-outline" style="margin-left:1rem;">View on RE/MAX.com</a>
-      </div>
+      <div class="agents-grid" id="agents-grid"></div>
     </div>
   </section>
-
-  <!-- JOIN BANNER -->
-  <section class="join-banner">
-    <div class="container join-banner-inner">
-      <div class="join-text">
-        <h2>Are You a Real Estate Professional?</h2>
-        <p>Join one of the most successful agencies in Southern California. RE/MAX Partners will provide you with the tools to be the best you can be in this industry.</p>
-      </div>
-      <a href="join.html" class="btn btn-primary btn-lg">Join Our Team</a>
+  <div style="background:linear-gradient(90deg,var(--red),var(--red-dark));padding:56px 0">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap">
+      <div><h2 style="font-size:1.9rem;font-weight:800;color:#fff;margin-bottom:10px">Join Our Award-Winning Team</h2><p style="color:rgba(255,255,255,.85)">We're always looking for talented agents to grow with us.</p></div>
+      <a href="join.html" class="btn btn-outline-white btn-lg"><i class="fas fa-user-plus"></i> Apply Now</a>
     </div>
-  </section>
-
+  </div>
   <footer class="footer">
     <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="images/remax-logo.png" alt="RE/MAX Partners" class="footer-logo" />
-        <p class="footer-tagline">Outstanding Agents. Outstanding Results.<sup>®</sup></p>
-        <p class="footer-legal">Each Office Independently Owned and Operated.<br>License #01792182</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="corona.html">Corona</a></li>
-          <li><a href="tustin.html">Tustin</a></li>
-          <li><a href="agents.html">Our Agents</a></li>
-          <li><a href="https://www.remax.com/usa/en/residential/office/corona/remax-partners-100422450" target="_blank">Search Listings</a></li>
-          <li><a href="join.html">Join Our Team</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact Us</h4>
-        <ul class="footer-contact">
-          <li><i class="fas fa-map-marker-alt"></i> 434 N. Main St. #107, Corona, CA 92878</li>
-          <li><i class="fas fa-map-marker-alt"></i> 250 W. Main St. #203, Tustin, CA 92780</li>
-          <li><i class="fas fa-phone"></i> <a href="tel:9512788755">(951) 278-8755</a></li>
-          
-        </ul>
-      </div>
+      <div><div><span class="footer-brand-remax">RE/MAX</span> <span class="footer-brand-partners">PARTNERS</span></div><p class="footer-tagline">Outstanding Agents. Outstanding Results.<sup>&#174;</sup></p><p class="footer-legal">Each Office Independently Owned and Operated.<br>License #01792182</p><div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="corona.html">Corona</a></li><li><a href="tustin.html">Tustin</a></li><li><a href="agents.html">Our Agents</a></li><li><a href="join.html">Join Our Team</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul class="footer-contact"><li><i class="fas fa-map-marker-alt"></i>434 N. Main St. #107, Corona, CA 92878</li><li><i class="fas fa-map-marker-alt"></i>250 W. Main St. #203, Tustin, CA 92780</li><li><i class="fas fa-phone"></i><a href="tel:9512788755">(951) 278-8755</a></li><li><i class="fas fa-phone"></i><a href="tel:7148844626">(714) 884-4626</a></li></ul></div>
     </div>
-    <div class="footer-bottom">
-      <div class="container footer-bottom-inner">
-        <p>&copy; 2026 RE/MAX Partners. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
-        <p><i class="fas fa-home"></i> Equal Housing Opportunity</p>
-      </div>
-    </div>
+    <div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; 2026 RE/MAX Partners. All Rights Reserved.</p><p>Each Office Independently Owned and Operated.</p></div></div>
   </footer>
-
-  <script src="script.js"></script>
+  <script>
+    const header=document.getElementById('header');
+    if(header){window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>60)})}
+    const hamburger=document.getElementById('hamburger');
+    const nav=document.getElementById('nav');
+    if(hamburger&&nav){hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');nav.classList.toggle('open')});nav.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{hamburger.classList.remove('open');nav.classList.remove('open')}))}
+    const allAgents=[
+      // CORONA OFFICE (24 agents)
+      {name:'April Glatzel',title:'Associate',phone:'(951) 205-4429',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/vUionIXfXBNLSwBc.jpg'},
+      {name:'Edward Mazmanian',title:'Associate',phone:'(951) 313-4750',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/FPvKJdaWKUgFEtRu.jpg'},
+      {name:'Shelly Larez',title:'Associate',phone:'(951) 847-5640',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/tlYidOcYmzRFvEwp.jpg'},
+      {name:'Robert Arrietta',title:'Associate',phone:'(951) 278-2000',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/aUVguKlEWgEKebmL.jpg'},
+      {name:'Sherry Baldwin',title:'Associate',phone:'(951) 830-8360',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/hbcUWfocUwjwvYEa.jpg'},
+      {name:'David Englin',title:'Associate',phone:'(951) 237-2881',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/GatsuUawbsEIHHEt.jpg'},
+      {name:'Candi Choumas',title:'Associate',phone:'(951) 278-8755',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/udNgqqotWHGqUCKI.jpg'},
+      {name:'Melissa Coles',title:'Associate',phone:'(951) 751-8136',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/MCwwVXpyiePTmLgS.jpg'},
+      {name:'Orlando Pino',title:'Associate',phone:'(714) 686-7736',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/aETaxemynkrOAlkV.jpg'},
+      {name:'George Saucedo',title:'Associate',phone:'(951) 734-9300',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/YUaDWfHQuCAVNZOh.jpg'},
+      {name:'Jillene Wasson',title:'Associate',phone:'(951) 907-1727',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/QpEAkCSAuziQDKAS.jpg'},
+      {name:'Jeannie Hallgrimson',title:'Associate',phone:'(951) 642-9933',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/rMHGzRpjllFxuYBm.jpg'},
+      {name:'Sandy Klein',title:'Associate',phone:'(951) 314-2256',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/aktvsLIqiyhctTCR.jpg'},
+      {name:'Tara Glatzel',title:'Associate',phone:'(951) 205-4428',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/ntOzBlDECaRpufCG.jpg'},
+      {name:'Kelli Dewiggins',title:'Associate',phone:'',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/mzPEGfbpEolkHZKw.jpg'},
+      {name:'Chris Choumas',title:'Associate',phone:'(951) 545-6110',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/xhUvHsSUfzoWaAzL.jpg'},
+      {name:'Ashley Choumas',title:'Associate',phone:'(951) 818-4168',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/ADsvKrAGgITmllwB.jpg'},
+      {name:'Joseph L. Soto III',title:'Associate',phone:'(909) 821-2666',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/TqjQgqpGQpPMdQjf.jpg'},
+      {name:'Veronica Martinez',title:'Associate',phone:'(714) 823-7065',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/VsnOIgZfCgoeJogh.jpg'},
+      {name:'Nora De La Torre-CRS',title:'Associate',phone:'(951) 345-0705',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/TixxQJfaVhqrdOSW.jpg'},
+      {name:'Andrea Mazmanian',title:'Associate',phone:'(951) 207-5418',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/TwRQXuPqCGZBEdAN.jpg'},
+      {name:'Heidi Franklin',title:'Associate',phone:'(909) 772-8842',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/ViVHgiuNIFvCrHky.jpg'},
+      {name:'Frank Nelson',title:'Associate',phone:'(951) 314-5981',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/oBBnuHpPLdnWwtOE.jpg'},
+      {name:'Micaela Gaxiola',title:'Associate',phone:'(951) 212-0853',office:'corona',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/sYtMGIDTPHrXQCGv.jpg'},
+      // TUSTIN OFFICE (9 agents)
+      {name:'Dave Larsen',title:'Office Manager',phone:'(714) 884-4626',office:'tustin',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/QxzXtymjUfpZPxaz.jpg'},
+      {name:'Rebecca Vasquez',title:'Associate',phone:'(951) 602-0623',office:'tustin',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/ngHZDVogrZQeOUDA.jpg'},
+      {name:'Jesse Ramirez',title:'Associate',phone:'(949) 817-2022',office:'tustin',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/fpsXzGpNkLjFGPrW.jpg'},
+      {name:'Veasna Chiek',title:'Associate',phone:'(951) 283-6576',office:'tustin',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/vpooygHPddWBzfQv.jpg'},
+      {name:'Stephanie Rubalcava',title:'Associate',phone:'(951) 500-6268',office:'tustin',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/rOkfPxbNEvDEruDj.jpg'},
+      {name:'Ben Rubalcava',title:'Associate',phone:'(714) 698-3380',office:'tustin',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/QifoqHFIlPEIKVAj.jpg'},
+      {name:'Jesse Martinez',title:'Associate',phone:'(626) 224-3374',office:'tustin',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/RrtOZARrrJfhVziL.jpg'},
+      {name:'Amanda Fallon',title:'Associate',phone:'(714) 328-0233',office:'tustin',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/EohYWoQmSsTHFlIA.jpg'},
+      {name:'Felipe Gallardo',title:'Associate',phone:'(714) 743-5029',office:'tustin',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/bhVfcyYMpAaegGfq.jpg'},
+    ];
+    function getInitials(name){return name.split(' ').map(n=>n[0]).join('').substring(0,2)}
+    function renderAgents(filter){
+      const grid=document.getElementById('agents-grid');
+      const list=filter==='all'?allAgents:allAgents.filter(a=>a.office===filter);
+      grid.innerHTML=list.map(a=>{
+        const ini=getInitials(a.name);
+        const badge=a.office==='corona'?'badge-corona':'badge-tustin';
+        const label=a.office==='corona'?'Corona':'Tustin';
+        const phoneClean=a.phone.replace(/\D/g,'');
+        const photoHtml=a.img?`<img src="${a.img}" alt="${a.name}" loading="lazy">`:'';        const initialsStyle=a.img?'display:none':'';        return `<div class="agent-card" data-office="${a.office}"><div class="agent-photo-wrap">${photoHtml}<div class="agent-initials" style="${initialsStyle}">${ini}</div></div><div class="agent-info"><span class="office-badge ${badge}">${label}</span><h4>${a.name}</h4><p class="agent-title">${a.title}</p>${a.phone?`<a href="tel:${phoneClean}" class="agent-phone"><i class="fas fa-phone"></i> ${a.phone}</a>`:''}</div></div>`;
+      }).join('');
+    }
+    function filterAgents(f,btn){
+      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      renderAgents(f);
+      // Highlight the matching office link
+      const links=document.querySelectorAll('#office-links a');
+      links.forEach(l=>l.style.opacity='1');
+      if(f==='corona'){links[1].style.opacity='0.4';}
+      else if(f==='tustin'){links[0].style.opacity='0.4';}
+    }
+    renderAgents('all');
+  </script>
 </body>
 </html>
