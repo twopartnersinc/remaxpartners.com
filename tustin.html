@@ -357,7 +357,7 @@
       {name:'Ben Rubalcava',title:'Associate',phone:'(714) 698-3380',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/QifoqHFIlPEIKVAj.jpg'},
       {name:'Jesse Martinez',title:'Associate',phone:'(626) 224-3374',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/RrtOZARrrJfhVziL.jpg'},
       {name:'Amanda Fallon',title:'Associate',phone:'(714) 328-0233',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/EohYWoQmSsTHFlIA.jpg'},
-      {name:'Felipe Gallardo',title:'Associate',phone:'(714) 743-5029',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/bhVfcyYMpAaegGfq.jpg'},
+      {name:'Felipe Gallardo',title:'Associate',phone:'(714) 743-5029',img:'images/felipe-gallardo.jpg'},
     ];YPE html>
 <html lang="en">
 <head>
@@ -542,7 +542,7 @@
     const hamburger=document.getElementById('hamburger');
     const nav=document.getElementById('nav');
     if(hamburger&&nav){hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');nav.classList.toggle('open')});nav.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{hamburger.classList.remove('open');nav.classList.remove('open')}))}
-    const agents=[{name:'Rebecca Vasquez',title:'Associate',phone:'(951) 602-0623'},{name:'Stephanie Rubalcava',title:'Associate',phone:'(951) 500-6268'},{name:'Amanda Fallon',title:'Associate',phone:'(714) 328-0233'},{name:'Jesse Ramirez',title:'Associate',phone:'(949) 817-2022'},{name:'Veasna Chiek',title:'Associate',phone:'(951) 283-6576'},{name:'Jesse Martinez',title:'Associate',phone:'(626) 224-3374'},{name:'Dave Larsen',title:'Associate',phone:'(714) 884-4626'},{name:'Ben Rubalcava',title:'Associate',phone:'(714) 698-3380'},{name:'Felipe Gallardo',title:'Associate',phone:'(714) 743-5029',img:'https://files.manuscdn.com/user_upload_by_module/session_file/310519663764764758/bhVfcyYMpAaegGfq.jpg'}];
+    const agents=[{name:'Rebecca Vasquez',title:'Associate',phone:'(951) 602-0623'},{name:'Stephanie Rubalcava',title:'Associate',phone:'(951) 500-6268'},{name:'Amanda Fallon',title:'Associate',phone:'(714) 328-0233'},{name:'Jesse Ramirez',title:'Associate',phone:'(949) 817-2022'},{name:'Veasna Chiek',title:'Associate',phone:'(951) 283-6576'},{name:'Jesse Martinez',title:'Associate',phone:'(626) 224-3374'},{name:'Dave Larsen',title:'Associate',phone:'(714) 884-4626'},{name:'Ben Rubalcava',title:'Associate',phone:'(714) 698-3380'},{name:'Felipe Gallardo',title:'Associate',phone:'(714) 743-5029',img:'images/felipe-gallardo.jpg'}];
     const grid=document.getElementById('tustin-agents-grid');
     if(grid){agents.forEach(a=>{const initials=a.name.split(' ').map(n=>n[0]).join('').substring(0,2);const photoHtml=a.img?`<img src="${a.img}" alt="${a.name}" loading="lazy">`:'' ;const initialsStyle=a.img?'display:none':'';grid.innerHTML+=`<div class="agent-card"><div class="agent-photo-wrap">${photoHtml}<div class="agent-initials" style="${initialsStyle}">${initials}</div></div><div class="agent-info"><h4>${a.name}</h4><p class="agent-title">${a.title}</p>${a.phone?\`<a href="tel:${a.phone.replace(/\D/g,'')}" class="agent-phone"><i class="fas fa-phone"></i> ${a.phone}</a>\`:''}</div></div>`})}
   </script>
