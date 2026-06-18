@@ -2,7 +2,7 @@
 // REMAX Partners - Contact Form Handler
 // Sends form submissions to sjjpartnersinc@gmail.com
 
-$to = 'sjjpartnersinc@gmail.com';
+$to = 'slrotondo@earthlink.net';
 
 // Sanitize inputs
 function clean($val) {

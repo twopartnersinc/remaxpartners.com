@@ -2,7 +2,7 @@
 // REMAX Partners - Join Our Team Form Handler
 // Sends applications to sjjpartnersinc@gmail.com
 
-$to = 'sjjpartnersinc@gmail.com';
+$to = 'slrotondo@earthlink.net';
 
 function clean($val) {
     return htmlspecialchars(strip_tags(trim($val)));
